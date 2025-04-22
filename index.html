@@ -3,256 +3,841 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- boxIcons -->
+    <!-- BOX ICONS  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css"
-        integrity="sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- favIcon -->
-    <link rel="shortcut icon" href="./img/logo.png" image/x-icon" width="">
-    <!-- meuCSS -->
-
-    <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="stylesheet" href="./css/media.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logomiguel.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Miguel Desenvolvedor</title>
 </head>
 
-<body>
+<body onload="preCarregamento();">
 
-    <div class="container">
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
-        <header>
-            <nav>
-                <div class="header"></div>
-                <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-                <label for="openSidebarMenu" class="sidebarIconToggle">
-                    <div class="spinner diagonal part-1"></div>
-                    <div class="spinner horizontal"></div>
-                    <div class="spinner diagonal part-2"></div>
-                </label>
-                <div id="sidebarMenu">
-                    <ul class="sidebarMenuInner">
-                        <li>Miguel Ferreira<span>Desenvolvedor web</span></li>
-                        <li><a href="#home" target="">Inicio</a></li>
-                        <li><a href="#cards-plano" target="">Serviços</a></li>
-                        <li><a href="contato.html" target="">Contato</a></li>
-                        <li><a href="clientes.html" target="">Clientes</a></li>
-
-                    </ul>
-                </div>
-
-            </nav>
-        </header>
-
-        <section id="home">
-            <div class="home-container">
-
-                <div class="home-fundo">
-
-
-                    <div class="home-txt">
-                        <ul>
-                            <li>
-                                <h1>Nossas criações de site sob medida para você!</h1>
-                            </li>
-                            <li>
-                                <p>Destaque sua presença online com um site personalizado e profissional, criado sob
-                                    medida
-                                    para o seu negócio. Conte com nossa expertise em design e desenvolvimento web para
-                                    conquistar e cativar seus clientes!</p>
-                            </li>
-                            <li><a href="#cards-plano">veja mais</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="home-inner">
-
-                        <img src="./img/mulher site.png" alt="">
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-
-
-        
-
-        <section id="info">
-
-            <div class="card-titulo">
-                <h2>Transforme os seus ganhos</h2>
-            </div>
-
-            <div class="info-container">
-
-
-
-                <div class="info-card">
-                    <ul class="card2">
-
-
-
-                        <li>
-                            <h2>Transforme sua presença online com um site único e impactante!</h2>
-                        </li>
-
-                        <li>
-                            <p>Você sabia que ter um site profissional pode fazer toda a diferença para o sucesso do seu
-                                negócio? Com a crescente importância da presença online, é essencial contar com uma
-                                plataforma que represente sua marca de forma eficaz e atraente.
-                                <br>
-                                <br>
-                                Eu sou Miguel Ferreira, desenvolvedor web especializado em criar sites personalizados
-                                que se destacam na internet. Combinando design criativo e funcionalidades avançadas,
-                                estou aqui para transformar sua visão em realidade digital.
-                                <br>
-                                <br>
-                                Meu compromisso é criar um site que não apenas impressione visualmente, mas também
-                                converta visitantes em clientes. Utilizando as últimas tecnologias e práticas de
-                                desenvolvimento web, garanto um resultado final que atenda às suas expectativas e
-                                objetivos de negócio.
-                                <br>
-                                <br>
-                                Se você deseja elevar sua presença online e alcançar um novo patamar de sucesso, entre
-                                em contato comigo hoje mesmo. Vamos juntos transformar sua ideia em um site incrível e
-                                impactante, Por Apenas <span>R$400,00</span>!
-                            </p>
-                        </li>
-
-
-                    </ul>
-                </div>
-
-                <div class="info-img"><img src="./img/img-2.png" alt=""> </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section id="cards-plano">
-
-            <div class="card-titulo">
-                <h2>Veja nossos Serviços</h2>
-            </div>
-
-            <div class="card-container">
-                <section class="articles">
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/html css.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Crie seu Site Profissional Agora!</h2>
-
-                                <p>
-                                    Transforme sua visão em um site impressionante que reflete sua marca. Nossa equipe
-                                    de especialistas cria designs avançados para impulsionar sua presença online.
-                                    Conquiste novos horizontes agora!
-                                </p>
-
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/manu.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Atualizações e Manutenção Profissional!</h2>
-
-
-                                <p>
-                                    Mantenha seu site seguro e atualizado com nossa equipe especializada em manutenção.
-                                    Deixe-nos cuidar dos detalhes técnicos para que você possa focar no crescimento do
-                                    seu negócio. Garanta a saúde do seu site agora mesmo!
-                                </p>
-
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/social media.jpg" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Gerenciamento Profissional para seu Negócio!</h2>
-
-
-                                <p>
-                                    Impulsione sua presença online com nosso gerenciamento de redes sociais. Deixe-nos
-                                    cuidar do seu conteúdo e interação para garantir resultados eficazes. Foque no seu
-                                    negócio enquanto alcança novos sucessos!
-                                </p>
-
-                            </div>
-                        </div>
-                    </article>
-
-                </section>
-
-            </div>
-
-
-        </section>
-
-
-
-
-
-        <footer>
-            <div class="footer">
-
-
-
-                <ul>
-                    <link rel="stylesheet"
-                        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-                    <a href="https://wa.me/5511951863723?text=Adorei%20seu%20artigo" target="_blank">
-                        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-                    </a>
-                    <h4><span>&copy;</span> Copyright Miguel Ferreira - 2024</h4>
-                </ul>
-
-            </div>
-        </footer>
-
-
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"></div>
     </div>
 
 
+    <div id="content">
 
-    <!-- MEU LINK JS  -->
-    <script src="script/script.js"></script>
+        <header>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                                fill="#0393ac">
+                                <path
+                                    d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="index.html">Pagina Inicial</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
 
-    <!-- JQUERY  -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                </ul>
+                <ul>
+                    <li><a href="#"><img src="./img/logomiguel.png" alt="Logo Senac"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Pagina Inicial</a></li>
+                    <li class="hideOnMobile"><a href="projetos.html">Projetos</a></li>
+                    <li class="hideOnMobile"><a href="contato.html">Contato</a></li>
+                    <li>
+                        <label>
+                            <input type="checkbox" class="theme-toggle-button">
+                            <span class="toggle"></span>
+                        </label>
+                    </li>
+                    <li class="menu-button" onclick="showSidebar()">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#0393ac">
+                                <path
+                                    d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Swiper JS -->
+        <main>
+
+            <section id="home">
+                <div class="bgImage">
+                    <svg class="blobCont">
+                        <image id="blobImage1" class="blobImage active" xlink:href="./img/home-fundo.png"
+                            mask="url(#mask)" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+                        <image id="blobImage2" class="blobImage" xlink:href="./img/home-fundo2.png" mask="url(#mask)"
+                            width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+                        <image id="blobImage3" class="blobImage" xlink:href="./img/home-fundo3.png" mask="url(#mask)"
+                            width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+                        <image id="blobImage4" class="blobImage" xlink:href="./img/home-fundo4.png" mask="url(#mask)"
+                            width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+
+                        <defs>
+                            <filter id="gooey" height="130%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                            </filter>
+                        </defs>
+                        <mask id="mask" x="0" y="0">
+                            <g style="filter: url(#gooey)">
+                                <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                                <circle class="blob" cx="50%" cy="10%" r="40" fill="white" stroke="white" />
+                                <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                                <circle class="blob" cx="90%" cy="20%" r="120" fill="white" stroke="white" />
+                                <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                                <circle class="blob" cx="50%" cy="60%" r="80" fill="white" stroke="white" />
+                                <circle class="blob" cx="70%" cy="90%" r="10" fill="white" stroke="white" />
+                                <circle class="blob" cx="90%" cy="60%" r="90" fill="white" stroke="white" />
+                                <circle class="blob" cx="30%" cy="90%" r="80" fill="white" stroke="white" />
+                                <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                                <circle class="blob" cx="50%" cy="10%" r="20" fill="white" stroke="white" />
+                                <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                                <circle class="blob" cx="40%" cy="20%" r="120" fill="white" stroke="white" />
+                                <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                                <circle class="blob" cx="80%" cy="60%" r="80" fill="white" stroke="white" />
+                                <circle class="blob" cx="17%" cy="10%" r="100" fill="white" stroke="white" />
+                                <circle class="blob" cx="40%" cy="60%" r="90" fill="white" stroke="white" />
+                                <circle class="blob" cx="10%" cy="50%" r="80" fill="white" stroke="white" />
+                            </g>
+                        </mask>
+                    </svg>
+                </div>
+
+                <div class="home-container">
+                    <div class="home-link">
+                        <ul>
+                            <li class="titulo">
+                                <h2 class="nome">Miguel Ferreira</h2>
+                                <h2 class="titulo-principal">Landing Page</h2>
+                            </li>
+                            <li class="li2">
+                                <h3>Desenvolvedor Front-End com experiência desde 2022<h3>
+                                        <div class="social-icons">
+                                            <a href="https://wa.me/5511951863723?text=Quero fazer%20Meu%20Site"" target="
+                                                _blank" class="social-icon"><i class='bx bxl-whatsapp'></i></a>
+                                            <a href="https://github.com/MiguelFerreira31 " target="_blank"
+                                                class="social-icon"><i class='bx bxl-github'></i></a>
+                                            <a href="https://www.linkedin.com/in/miguel-cezar-ferreira-b6a42825a/"
+                                                target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                                        </div>
+                            </li>
+                            <li class="li3">
+                                <a href="projetos.html"><button id="btnHome">Ver Projetos</button></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="cliente">
+                <div class="titulo">
+                    <div class="foguete-gif" data-aos="fade-up" data-aos-duration="1000">
+                    </div>
+                    <h2 data-aos="fade-right" data-aos-duration="500">Desenvolvimento Ágil de Sites</h2>
+                </div>
+                <div class="cliente-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/React.png" alt="Logo massachusetts"></div>
+                            <div class="swiper-slide"><img src="./img/angular.png" alt="Lopo OpenAI"></div>
+                            <div class="swiper-slide"><img src="./img/html5.png" alt="Logo Senac"></div>
+                            <div class="swiper-slide"><img src="./img/sass.png" alt="Logo Super Xandão"></div>
+                            <div class="swiper-slide"><img src="./img/php.png" alt=" Logo Senai"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="sobre">
+                <div class="titulo">
+                    <h2 data-aos="fade-right" data-aos-duration="1000">Unindo Criatividade e Tecnologia em Cada Projeto
+                    </h2>
+                    <hr>
+                </div>
+
+
+                <div class="sobre-container ">
+
+                    <div class="sobreImg" data-aos="zoom-in" data-aos-duration="1000">
+                        <img src="./img/miguel.png" alt="Imagem Equipe de Desenvolvedores">
+                    </div>
+
+                    <ul>
+                        <li>
+                            <h3 data-aos="fade-right" data-aos-duration="1000">Sobre mim</h3>
+                            <hr data-aos="fade-left" data-aos-duration="1000">
+                        </li>
+                        <li>
+                            <p data-aos="fade-up" data-aos-duration="1000">Meu nome é Miguel Cezar Ferreira, sou
+                                estudante de Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul,
+                                com previsão de conclusão em dezembro de 2026. Apaixonado por tecnologia e inovação,
+                                venho me especializando na área de desenvolvimento Full Stack, com foco em soluções web
+                                modernas, eficientes e intuitivas.
+                                <br>
+                                <br>
+                                Ao longo da minha jornada, busquei complementar minha formação acadêmica com diversos
+                                cursos técnicos e de extensão. Sou formado como Técnico em Informática para Internet e
+                                Técnico em Informática pelo SENAC São Miguel Paulista, e concluo em breve cursos como
+                                Desenvolvedor Web Front-End com JavaScript, Angular Interfaces Front-End e Criação e
+                                Gerenciamento de Sites em WordPress.
+                                <br>
+                                <br>
+                                Além da área técnica, também valorizo a comunicação e o aprendizado contínuo de idiomas.
+                                Possuo nível intermediário em inglês e estou em processo de aprendizado em espanhol e
+                                francês, o que amplia minha capacidade de atuar em ambientes multiculturais e
+                                colaborativos.
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </section>
+
+            <section id="service">
+
+                <div class="inner-header">
+                    <div class="waves-container">
+                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                            <defs>
+                                <path id="gentle-wave"
+                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(34, 34, 34, 0.7)" />
+                                <use xlink:href="#gentle-wave" x="48" y="3" fill="#222222" />
+                                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(34, 34, 34, 0.3)" />
+                                <use xlink:href="#gentle-wave" x="48" y="7" fill="#222222" />
+                            </g>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="titulo-service">
+                    <h2 data-aos="fade-right" data-aos-duration="1000">Serviços Freelancer</h2>
+                    <hr data-aos="fade-left" data-aos-duration="1000">
+                </div>
+
+                <div class="service-container">
+
+                    <div class="service-inner">
+
+                        <div class="service-cards">
+
+                            <div class="card1">
+                                <ul data-aos="zoom-in-down" data-aos-duration="1200">
+                                    <li><img src="./img/service.png" alt="Ilustração computador" data-aos="fade-right"
+                                            data-aos-duration="1000">
+                                    </li>
+                                    <li>
+                                        <h3 data-aos="fade-left" data-aos-duration="1000">Criação de
+                                            Sites</h3>
+                                        <hr data-aos="fade-down" data-aos-duration="1000">
+                                        <p data-aos="fade-up" data-aos-duration="1000">
+                                            Desenvolvimento web personalizado para empresas, incluindo sites
+                                            institucionais
+                                            e
+                                            landing pages.</p>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card2 ">
+                                <ul data-aos="zoom-in-right" data-aos-duration="1200">
+                                    <li><img src="./img/card2.png" alt="Ilustração Marketing" data-aos="fade-up"
+                                            data-aos-duration="1000">
+                                    </li>
+                                    <li>
+                                        <h3 data-aos="fade-right" data-aos-duration="1000">Marketing
+                                            Digital</h3>
+                                        <hr data-aos="fade-left" data-aos-duration="1000">
+                                        <p data-aos="fade-up" data-aos-duration="1000" ">Auxiliamos no
+                                        crescimento do seu produto, desde encontrar o market fit até
+                                        aumentar vendas e reter clientes.</p>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=" card3">
+                                        <ul data-aos="zoom-in-up" data-aos-duration="1200">
+                                            <li><img src="./img/card3.png" alt=" Ilustração UX/Ui Design"
+                                                    data-aos="fade-down" data-aos-duration="1000"></li>
+                                            <li>
+                                                <h3 data-aos="fade-left" data-aos-duration="1000">UI/UX Design
+                                                </h3>
+                                                <hr data-aos="fade-right" data-aos-duration="1000">
+                                                <p data-aos="fade-up" data-aos-duration="1000">Desenvolvemos
+                                                    sites institucionais e landing pages personalizados. Experiências
+                                                    de usuário intuitivas e designs atrativos para garantir o sucesso do
+                                                    seu
+                                                    produto.</p>
+
+                                            </li>
+                                        </ul>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <img src="./img/programador-trabalhando-em-estilo-simples.png" alt="">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="depoimento">
+                <div class="titulo">
+                    <h2 data-aos="fade-right" data-aos-duration="1000">Depoimentos</h2>
+                    <hr data-aos="fade-left" data-aos-duration="1000">
+
+
+                </div>
+                <div class="depoimento-container">
+
+
+                    <div class="titulo">
+                        <ul>
+
+                            <li>
+                                <h3> Com Base em <span class="contador">50</span> Avaliações</3>
+                            </li>
+                            <li> <i class='bx bxs-star star' data-aos="fade-right" data-aos-duration="1000"></i>
+                                <i class='bx bxs-star star' data-aos="fade-right" data-aos-duration="700"></i>
+                                <i class='bx bxs-star star' data-aos="fade-right" data-aos-duration="600"></i>
+                                <i class='bx bxs-star star' data-aos="fade-right" data-aos-duration="500"></i>
+                                <i class='bx bxs-star star' data-aos="fade-right" data-aos-duration="400"></i>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="swiper mySwiperCard">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+
+                                <div class="cabecalho-card">
+
+                                    <img src="./img/perfil1.png" alt="Foto de Perfil">
+                                    <ul>
+
+                                        <li class="line-name">
+                                            <h3>Gabriel.</h3>
+                                            <?xml version="1.0" encoding="utf-8" standalone="no"?><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                <defs>
+                                                    <path id="a"
+                                                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                                <path clip-path="url(#b)" fill="#EA4335"
+                                                    d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                                <path clip-path="url(#b)" fill="#34A853"
+                                                    d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                                <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <p>5 de Agosto de 2024</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="corpo-card">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </li>
+
+                                        <li>
+                                            <p>O site é intuitivo e fácil de navegar, com design moderno e elegante.</p>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <div class="cabecalho-card">
+
+                                    <img src="./img/perfilmulher.png" alt="Foto de Perfil">
+                                    <ul>
+
+                                        <li class="line-name">
+                                            <h3>Julia.</h3>
+                                            <?xml version="1.0" encoding="utf-8" standalone="no"?><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                <defs>
+                                                    <path id="a"
+                                                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                                <path clip-path="url(#b)" fill="#EA4335"
+                                                    d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                                <path clip-path="url(#b)" fill="#34A853"
+                                                    d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                                <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <p>22 de junho de 2024</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="corpo-card">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </li>
+
+                                        <li>
+                                            <p>Os serviços oferecidos são de alta qualidade, com uma apresentação
+                                                profissional</p>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <div class="cabecalho-card">
+
+                                    <img src="./img/perfilhomem.png" alt="Foto de Perfil">
+                                    <ul>
+
+                                        <li class="line-name">
+                                            <h3>Augusto.</h3>
+                                            <?xml version="1.0" encoding="utf-8" standalone="no"?><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                <defs>
+                                                    <path id="a"
+                                                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                                <path clip-path="url(#b)" fill="#EA4335"
+                                                    d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                                <path clip-path="url(#b)" fill="#34A853"
+                                                    d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                                <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <p>11 de Fevereiro de 2024</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="corpo-card">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </li>
+
+                                        <li>
+                                            <p>Excelente atenção aos detalhes no design, proporcionando uma ótima
+                                                experiência de usuário.</p>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <div class="cabecalho-card">
+
+                                    <img src="./img/perfil.png" alt="Foto de Perfil">
+                                    <ul>
+
+                                        <li class="line-name">
+                                            <h3>Rodolfo.</h3>
+                                            <?xml version="1.0" encoding="utf-8" standalone="no"?><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                <defs>
+                                                    <path id="a"
+                                                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                                <path clip-path="url(#b)" fill="#EA4335"
+                                                    d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                                <path clip-path="url(#b)" fill="#34A853"
+                                                    d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                                <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <p>22 de junho de 2023</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="corpo-card">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </li>
+
+                                        <li>
+                                            <p>Os projetos apresentados demonstram um sólido conhecimento técnico e
+                                                criatividade.</p>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <div class="cabecalho-card">
+
+                                    <img src="./img/perfilmulher.png" alt="Foto de Perfil">
+                                    <ul>
+
+                                        <li class="line-name">
+                                            <h3>Tainá.</h3>
+                                            <?xml version="1.0" encoding="utf-8" standalone="no"?><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                <defs>
+                                                    <path id="a"
+                                                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                                <path clip-path="url(#b)" fill="#EA4335"
+                                                    d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                                <path clip-path="url(#b)" fill="#34A853"
+                                                    d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                                <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <p>11 de maio de 2023</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="corpo-card">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </li>
+
+                                        <li>
+                                            <p>O suporte ao cliente é excepcional, sempre pronto para ajudar com
+                                                qualquer dúvida.</p>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <div class="cabecalho-card">
+
+                                    <img src="./img/perfilhomem.png" alt="Foto de Perfil">
+                                    <ul>
+
+                                        <li class="line-name">
+                                            <h3>Giovanni.</h3>
+                                            <?xml version="1.0" encoding="utf-8" standalone="no"?><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                <defs>
+                                                    <path id="a"
+                                                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                                <path clip-path="url(#b)" fill="#EA4335"
+                                                    d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                                <path clip-path="url(#b)" fill="#34A853"
+                                                    d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                                <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <p>25 de Abril de 2024</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="corpo-card">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </li>
+
+                                        <li>
+                                            <p>Foi ótimo trabalho melhor impossível, eu indico muito bom o trabalho</p>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+
+
+
+
+                </div>
+            </section>
+
+
+            <section id="habilidades">
+                <div class="habilidades-container">
+
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+
+              
+
+
+                    </div>
+            </section>
+
+            <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i
+                    class='bx bxs-chevrons-up'></i></button>
+        </main>
+
+
+        <footer>
+            <div class="inner-header">
+                <div class="waves-container">
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(34, 34, 34, 0.7)" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="#222222" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(34, 34, 34, 0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#222222" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="header-content">
+
+
+                </div>
+            </div>
+            <div class="footer-container">
+
+                <div class="footer-section">
+
+                    <ul>
+                        <li><a href="index.html">Pagina Inicial</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Veja Mais</h4>
+                    <div class="social-icons">
+                        <a href="https://wa.me/5511951863723?text=Quero fazer%20Meu%20Site"" target=" _blank"
+                            class="social-icon"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://github.com/MiguelFerreira31 " target="_blank" class="social-icon2"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/miguel-cezar-ferreira-b6a42825a/" target="_blank"
+                            class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer">
+
+
+                <ul>
+
+                    <div id="chat-icon"><i class='bx bx-message-square-detail'></i></div>
+
+                    <div id="chat-container">
+
+                        <div class="topo-chat">
+                            <ul>
+                                <li id="bot"><i class="bx bxs-bot"></i></li>
+                                <li id="titulo-bot">
+                                    <h5>Atendimento</h5>
+                                    <h6>Chat-boot</h6>
+                                </li>
+                            </ul>
+
+                            <button id="back-button">Fechar</button>
+                        </div>
+
+                        <div id="chat-messages"></div>
+                        <div class="enviar">
+                            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                            <button id="send-button">Enviar</button>
+                        </div>
+                    </div>
+
+                </ul>
+
+
+
+
+            </div>
+
+
+            <div class="copy">
+                <h4>
+                    &copy; Miguel Ferreira
+                </h4>
+
+                <a href="privacy.html">Politica de privacidade
+                </a>
+            </div>
+
+
+
+
+        </footer>
+
+    </div>
+
+    <!-- AOS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <!-- jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- VLIBRAS  -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- SWIPER  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- BOXICONS  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-    <!-- cdn  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
-
+    <script src="script/script.js"></script>
 
 
 </body>

@@ -3,185 +3,245 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- boxIcons -->
+    <!-- BOX ICONS  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- AOS -->
+
+    <!-- AOS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css"
-        integrity="sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-    <!-- favIcon -->
-    <link rel="shortcut icon" href="./img/logo.png" image/x-icon" width="">
-    <!-- meuCSS -->
-
-    <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="stylesheet" href="./css/media.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
-    <title>Miguel Desenvolvedor</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logoSenacria.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Contato</title>
 </head>
 
-<body>
-
-    <div class="container">
-
-        <header>
-            <nav>
-                <div class="header"></div>
-                <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-                <label for="openSidebarMenu" class="sidebarIconToggle">
-                    <div class="spinner diagonal part-1"></div>
-                    <div class="spinner horizontal"></div>
-                    <div class="spinner diagonal part-2"></div>
-                </label>
-                <div id="sidebarMenu">
-                    <ul class="sidebarMenuInner">
-                        <li>Miguel Ferreira<span>Desenvolvedor web</span></li>
-                        <li><a href="index.html" target="">Inicio</a></li>
-                        <li><a href="clientes.html" target="">Clientes</a></li>
-
-
-                    </ul>
-                </div>
-
-            </nav>
-        </header>
-
-
-        <main>
-
-
-
-            <section id="contato">
-
-                <!-- CONTACT -->
-
-
-                <div class="contato-container">
-
-
-
-                    <div class="contact-api">
-                        <form action="https://api.staticforms.xyz/submit" method="post">
-
-                    </div>
-
-                    <div class="contato-form">
-
-
-                        <ul class="contact-inner">
-                            <li>
-
-                                <h2>Entre em contato conosco e tire suas duvidas</h2>
-                            </li>
-                            <li>
-                                <input type="text" name="name" placeholder="Nome:" autocomplete="off" required>
-                            </li>
-                            <li>
-                                <input type="email" name="name" placeholder="Email:" autocomplete="off" required>
-                            </li>
-                            <li>
-                                <textarea name="message" cols="30" rows="10" placeholder="Digite sua Mensagem:"
-                                    required></textarea>
-                            </li>
-                            <li class="formBtn">
-                                <input type="submit" value="Enviar" class="btnDefault">
-                                <input type="reset" value="Limpar" class="btnDefault">
-                            </li>
-
-
-                            <!-- key acess -->
-
-                            <input type="hidden" name="accessKey" value="2388488f-4865-43c7-93bb-a0fa90c4a791">
-
-
-                            <!-- Redirect page -->
-                            <input type="hidden" name="redirectTo" value="https://miguelcferreira.com.br/thanks.html">
-                        </ul>
-                        </form>
-                    </div>
-
-
-                    <div class="contato-card">
-
-
-                        <ul class="card">
-
-                            <li><img src="./img/mulher site3.png" alt=""></li>
-
-                            <li>
-                                <h3>Entre em contato respondendo o formulário</h3>
-                            </li>
-
-
-                            <li>
-                                <p>
-        
-                                    Agradecemos por entrar em contato conosco e por enviar sua dúvida através do
-                                    formulário. Sua questão é importante para nós e estamos dedicados a fornecer a
-                                    melhor resposta possível.
-                                </p>
-                            </li>
-
-
-                        </ul>
-
-                    </div>
-
-
-            </section>
-
-
-        </main>
-
-
-
-
-
-        <footer>
-            <div class="footer">
-
-
-
-                <ul>
-                    <link rel="stylesheet"
-                        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-                    <a href="https://wa.me/5511951863723?text=Adorei%20seu%20artigo" target="_blank">
-                        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-                    </a>
-                    <h4><span>&copy;</span> Copyright Miguel Ferreira - 2024</h4>
-                </ul>
-
-            </div>
-        </footer>
-
-
+<body onload="preCarregamento();">
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"></div>
     </div>
 
 
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                            fill="#0393ac">
+                            <path
+                                d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="index.html">Pagina Inicial</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
 
-    <!-- MEU LINK JS  -->
-    <script src="script/script.js"></script>
+            </ul>
+            <ul>
+                <li><a href="#"><img src="./img/logomiguel.png" alt="Logo Senac"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Pagina Inicial</a></li>
+                <li class="hideOnMobile"><a href="projetos.html">Projetos</a></li>
+                <li class="hideOnMobile"><a href="contato.html">Contato</a></li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="theme-toggle-button">
+                        <span class="toggle"></span>
+                    </label>
+                </li>
+                <li class="menu-button" onclick="showSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                            fill="#0393ac">
+                            <path
+                                d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- JQUERY  -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-    <!-- Swiper JS -->
+
+    
+
+
+    <main>
+
+
+
+
+        <section id="contact">
+
+
+            <div class="bgImage">
+                <svg class="blobCont">
+                    <image xlink:href="./img/home-fundo.png" mask="url(#mask)" width="100%" height="100%"
+                        preserveAspectRatio="xMidYMid slice" />
+                    <defs>
+                        <filter id="gooey" height="130%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                result="goo" />
+                        </filter>
+                    </defs>
+                    <mask id="mask" x="0" y="0">
+                        <g style="filter: url(#gooey)">
+                            <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="50%" cy="10%" r="40" fill="white" stroke="white" />
+                            <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                            <circle class="blob" cx="90%" cy="20%" r="120" fill="white" stroke="white" />
+                            <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                            <circle class="blob" cx="50%" cy="60%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="70%" cy="90%" r="10" fill="white" stroke="white" />
+                            <circle class="blob" cx="90%" cy="60%" r="90" fill="white" stroke="white" />
+                            <circle class="blob" cx="30%" cy="90%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="50%" cy="10%" r="20" fill="white" stroke="white" />
+                            <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                            <circle class="blob" cx="40%" cy="20%" r="120" fill="white" stroke="white" />
+                            <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                            <circle class="blob" cx="80%" cy="60%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="17%" cy="10%" r="100" fill="white" stroke="white" />
+                            <circle class="blob" cx="40%" cy="60%" r="90" fill="white" stroke="white" />
+                            <circle class="blob" cx="10%" cy="50%" r="80" fill="white" stroke="white" />
+                        </g>
+                    </mask>
+                </svg>
+            </div>
+
+
+
+            <div class="contact-container">
+
+                <div class="contact-inner">
+
+
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+
+                        <input type="hidden" name="accessKey" value="2388488f-4865-43c7-93bb-a0fa90c4a791">
+                        <!-- Required -->
+                        <label for="">Nome</label>
+                        <input type="text" name="name" required placeholder="Ex: João da Silva">
+
+                        <label for="">Email</label>
+                        <input type="text" name="email" required placeholder="Ex: joao@example.com">
+                        <label for="">Celular</label>
+                        <input type="text" name="phone" required placeholder="Ex: (11) 91234-5678">
+                        <label for="">Mensagem</label>
+                        <textarea name="message" placeholder="Como podemos ajudar você?"></textarea>
+                        <input type="hidden" name="replyTo" value="miguelccezarferreira@gmail.com" required>
+                        <input type="hidden" name="redirectTo" value="https://miguelcferreira.com.br/thanks.html">
+                        <!-- Optional -->
+                        <input type="submit" value="Enviar" class="btnEnviar" />
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i
+            class='bx bxs-chevrons-up'></i></button>
+    </main>
+
+
+  
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-section">
+
+                <ul>
+                    <li><a href="index.html">Pagina Inicial</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Veja Mais</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/5511951863723?text=Quero fazer%20Meu%20Site"" target="_blank" class="social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="https://github.com/MiguelFerreira31 " target="_blank" class="social-icon2"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/miguel-cezar-ferreira-b6a42825a/" target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+
+
+            <ul>
+
+                <div id="chat-icon"><i class='bx bx-message-square-detail'></i></div>
+
+                <div id="chat-container">
+
+                    <div class="topo-chat">
+                        <ul>
+                            <li id="bot"><i class="bx bxs-bot"></i></li>
+                            <li id="titulo-bot">
+                                <h5>Atendimento</h5>
+                                <h6>Chat-boot</h6>
+                            </li>
+                        </ul>
+
+                        <button id="back-button">Fechar</button>
+                    </div>
+
+                    <div id="chat-messages"></div>
+                    <div class="enviar">
+                        <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                        <button id="send-button">Enviar</button>
+                    </div>
+                </div>
+
+            </ul>
+
+
+
+
+        </div>
+
+
+        <div class="copy">
+            <h4>
+                &copy; Miguel Ferreira
+            </h4>
+
+            <a href="privacy.html">Politica de privacidade
+            </a>
+        </div>
+
+
+
+    </footer>
+
+    <!-- AOS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- VLIBRAS  -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- SWIPER  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- BOXICONS  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-    <!-- cdn  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
-
-
-
+    <script src="script/script.js"></script>
 </body>
 
 </html>

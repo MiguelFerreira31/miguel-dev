@@ -1,93 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- boxIcons -->
+    <!-- BOX ICONS  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- AOS -->
+
+    <!-- AOS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css"
-        integrity="sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-    <!-- favIcon -->
-    <link rel="shortcut icon" href="./img/logo.png" image/x-icon" width="">
-    <!-- meuCSS -->
-
-    <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="stylesheet" href="./css/media.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
-    <title>Miguel Desenvolvedor</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logoSenacria.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Obrigado</title>
 </head>
-<body>
-    
-<div class="container">
 
+<body onload="preCarregamento();">
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"></div>
+    </div>
 
     <header>
         <nav>
-            <div class="header"></div>
-            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-            <label for="openSidebarMenu" class="sidebarIconToggle">
-                <div class="spinner diagonal part-1"></div>
-                <div class="spinner horizontal"></div>
-                <div class="spinner diagonal part-2"></div>
-            </label>
-            <div id="sidebarMenu">
-                <ul class="sidebarMenuInner">
-                    <li>Miguel Ferreira<span>Desenvolvedor web</span></li>
-                    <li><a href="index.html" target="">Inicio</a></li>
-                    <li><a href="clientes.html" target="">Clientes</a></li>
-                    <li><a href="contato.html" target="">Contato</a></li>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                            fill="#0393ac">
+                            <path
+                                d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="index.html">Pagina Inicial</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
 
-                </ul>
-            </div>
-
+            </ul>
+            <ul>
+                <li><a href="#"><img src="./img/logomiguel.png" alt="Logo Senac"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Pagina Inicial</a></li>
+                <li class="hideOnMobile"><a href="projetos.html">Projetos</a></li>
+                <li class="hideOnMobile"><a href="contato.html">Contato</a></li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="theme-toggle-button">
+                        <span class="toggle"></span>
+                    </label>
+                </li>
+                <li class="menu-button" onclick="showSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                            fill="#0393ac">
+                            <path
+                                d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
 
-<main>
-
-<section id="thank">
-
-<div class="thank-container">
-
-<div class="thank-inner">
-    <ul>
-
-<li><h1>Obrigado por enviar sua mensagem</h1></li>
-<li>Sua mensagem sera avaliada e respondida em breve em seu Email</li>
-<li><button><a href="index.html">Voltar</a></button></li>
-    </ul>
-</div>
 
 
 
-</div>
-
-
-</section>
+    <main>
 
 
 
 
-</main>
+        <section id="thanks">
+
+
+            <div class="bgImage">
+                <svg class="blobCont">
+                    <image xlink:href="./img/home-fundo.png" mask="url(#mask)" width="100%" height="100%"
+                        preserveAspectRatio="xMidYMid slice" />
+                    <defs>
+                        <filter id="gooey" height="130%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                result="goo" />
+                        </filter>
+                    </defs>
+                    <mask id="mask" x="0" y="0">
+                        <g style="filter: url(#gooey)">
+                            <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="50%" cy="10%" r="40" fill="white" stroke="white" />
+                            <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                            <circle class="blob" cx="90%" cy="20%" r="120" fill="white" stroke="white" />
+                            <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                            <circle class="blob" cx="50%" cy="60%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="70%" cy="90%" r="10" fill="white" stroke="white" />
+                            <circle class="blob" cx="90%" cy="60%" r="90" fill="white" stroke="white" />
+                            <circle class="blob" cx="30%" cy="90%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="50%" cy="10%" r="20" fill="white" stroke="white" />
+                            <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                            <circle class="blob" cx="40%" cy="20%" r="120" fill="white" stroke="white" />
+                            <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                            <circle class="blob" cx="80%" cy="60%" r="80" fill="white" stroke="white" />
+                            <circle class="blob" cx="17%" cy="10%" r="100" fill="white" stroke="white" />
+                            <circle class="blob" cx="40%" cy="60%" r="90" fill="white" stroke="white" />
+                            <circle class="blob" cx="10%" cy="50%" r="80" fill="white" stroke="white" />
+                        </g>
+                    </mask>
+                </svg>
+            </div>
+
+
+
+            <div class="thanks-container">
+
+                <h2>Obrigado por mandar essa mensagem</h2>
+                <a href="index.html"><button id="btnThanks">Voltar</button></a>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Senacria</h4>
+                <p>A Criatividade, Responsabilidade e Qualidade Certa para o Seu site</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="index.html">Pagina Inicial</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="social-icon2"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+
+
+            <ul>
+
+                <div id="chat-icon"><i class='bx bx-message-square-detail'></i></div>
+
+                <div id="chat-container">
+
+                    <div class="topo-chat">
+                        <ul>
+                            <li id="bot"><i class="bx bxs-bot"></i></li>
+                            <li id="titulo-bot">
+                                <h5>Atendimento</h5>
+                                <h6>Chat-boot</h6>
+                            </li>
+                        </ul>
+
+                        <button id="back-button">Fechar</button>
+                    </div>
+
+                    <div id="chat-messages"></div>
+                    <div class="enviar">
+                        <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                        <button id="send-button">Enviar</button>
+                    </div>
+                </div>
+
+            </ul>
 
 
 
 
+        </div>
 
-</div>
 
+        <div class="copy">
+            <h4>
+                &copy;Senacria
+            </h4>
+
+            <a href="privacy.html">Politica de privacidade
+            </a>
+        </div>
+
+
+
+
+    </footer>
+
+  <!-- AOS  -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- VLIBRAS  -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+  <!-- SWIPER  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- BOXICONS  -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <script src="script/script.js"></script>
 
 
 </body>
+
 </html>

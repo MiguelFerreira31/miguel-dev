@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOX ICONS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logoSenacria.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Contato</title>
+</head>
+
+<body onload="preCarregamento();">
+
+
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                            fill="#0393ac">
+                            <path
+                                d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="index.html">Pagina Inicial</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+
+            </ul>
+            <ul>
+                <li><a href="#"><img src="./img/logomiguel.png" alt="Logo Senac"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Pagina Inicial</a></li>
+                <li class="hideOnMobile"><a href="projetos.html">Projetos</a></li>
+                <li class="hideOnMobile"><a href="contato.html">Contato</a></li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="theme-toggle-button">
+                        <span class="toggle"></span>
+                    </label>
+                </li>
+                <li class="menu-button" onclick="showSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                            fill="#0393ac">
+                            <path
+                                d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"></div>
+    </div>
+
+
+<main>
+
+    <section id="privacy">
+        <div class="bgImage">
+            <svg class="blobCont">
+                <image xlink:href="./img/home-fundo.png" mask="url(#mask)" width="100%" height="100%"
+                    preserveAspectRatio="xMidYMid slice" />
+                <defs>
+                    <filter id="gooey" height="130%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                            result="goo" />
+                    </filter>
+                </defs>
+                <mask id="mask" x="0" y="0">
+                    <g style="filter: url(#gooey)">
+                        <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                        <circle class="blob" cx="50%" cy="10%" r="40" fill="white" stroke="white" />
+                        <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                        <circle class="blob" cx="90%" cy="20%" r="120" fill="white" stroke="white" />
+                        <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                        <circle class="blob" cx="50%" cy="60%" r="80" fill="white" stroke="white" />
+                        <circle class="blob" cx="70%" cy="90%" r="10" fill="white" stroke="white" />
+                        <circle class="blob" cx="90%" cy="60%" r="90" fill="white" stroke="white" />
+                        <circle class="blob" cx="30%" cy="90%" r="80" fill="white" stroke="white" />
+                        <circle class="blob" cx="10%" cy="10%" r="80" fill="white" stroke="white" />
+                        <circle class="blob" cx="50%" cy="10%" r="20" fill="white" stroke="white" />
+                        <circle class="blob" cx="17%" cy="15%" r="70" fill="white" stroke="white" />
+                        <circle class="blob" cx="40%" cy="20%" r="120" fill="white" stroke="white" />
+                        <circle class="blob" cx="30%" cy="25%" r="30" fill="white" stroke="white" />
+                        <circle class="blob" cx="80%" cy="60%" r="80" fill="white" stroke="white" />
+                        <circle class="blob" cx="17%" cy="10%" r="100" fill="white" stroke="white" />
+                        <circle class="blob" cx="40%" cy="60%" r="90" fill="white" stroke="white" />
+                        <circle class="blob" cx="10%" cy="50%" r="80" fill="white" stroke="white" />
+                    </g>
+                </mask>
+            </svg>
+        </div>
+
+
+        <div class="privacy-container">
+
+
+<div class="privacy-inner">
+
+    <h1>Política de Privacidade</h1>
+    <p>Última atualização: 23 de julho de 2024</p>
+
+    <p>Bem-vindo à nossa Política de Privacidade. Sua privacidade é importante para nós. Esta política descreve
+        como coletamos, usamos, divulgamos e protegemos suas informações pessoais.</p>
+
+    <h2>Informações que Coletamos</h2>
+    <p>Podemos coletar informações pessoais que você nos fornece diretamente, como nome, endereço de e-mail,
+        telefone e quaisquer outras informações que você decidir nos fornecer.</p>
+    <p>Também podemos coletar informações automaticamente quando você utiliza nosso site, incluindo seu endereço
+        IP, tipo de navegador, páginas visitadas e tempo gasto em nosso site.</p>
+
+    <h2>Como Usamos Suas Informações</h2>
+    <h3>Usamos as informações coletadas para:</h3>
+    <ul>
+        <li>Fornecer e melhorar nossos serviços;</li>
+        <li>Personalizar sua experiência em nosso site;</li>
+        <li>Responder a seus comentários e perguntas;</li>
+        <li>Enviar comunicações de marketing, se você optou por recebê-las;</li>
+        <li>Cumprir obrigações legais.</li>
+    </ul>
+
+    <h2>Compartilhamento de Informações</h2>
+    <p>Não vendemos, trocamos ou alugamos suas informações pessoais a terceiros. Podemos compartilhar
+        informações com provedores de serviços que nos ajudam a operar nosso site e conduzir nossos negócios,
+        desde que esses provedores concordem em manter essas informações confidenciais.</p>
+
+    <h2>Segurança</h2>
+    <p>Implementamos medidas de segurança para proteger suas informações pessoais contra acesso, alteração,
+        divulgação ou destruição não autorizada. No entanto, nenhum método de transmissão pela Internet ou
+        armazenamento eletrônico é 100% seguro.</p>
+
+    
+
+    <h2>Links para Outros Sites</h2>
+    <p>Nosso site pode conter links para outros sites. Não somos responsáveis pelas práticas de privacidade ou
+        pelo conteúdo desses sites.</p>
+
+    <h2>Alterações a Esta Política</h2>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. Publicaremos a nova política no site e
+        atualizaremos a data de "Última atualização". Recomendamos que você revise esta política regularmente.
+    </p>
+
+    <h2>Contato</h2>
+    <p>Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato conosco:</p>
+    <p>Email: miguelcceczarferreira@gmail.com</p>
+    <p>Telefone: (11) 95186-3723</p>
+
+
+
+</div>
+
+
+
+        </div>
+    </section>
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i
+        class='bx bxs-chevrons-up'></i></button>
+</main>
+   
+
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+
+            <ul>
+                <li><a href="index.html">Pagina Inicial</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Veja Mais</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/5511951863723?text=Quero fazer%20Meu%20Site"" target="_blank" class="social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://github.com/MiguelFerreira31 " target="_blank" class="social-icon2"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/miguel-cezar-ferreira-b6a42825a/" target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+
+
+        <ul>
+
+            <div id="chat-icon"><i class='bx bx-message-square-detail'></i></div>
+
+            <div id="chat-container">
+
+                <div class="topo-chat">
+                    <ul>
+                        <li id="bot"><i class="bx bxs-bot"></i></li>
+                        <li id="titulo-bot">
+                            <h5>Atendimento</h5>
+                            <h6>Chat-boot</h6>
+                        </li>
+                    </ul>
+
+                    <button id="back-button">Fechar</button>
+                </div>
+
+                <div id="chat-messages"></div>
+                <div class="enviar">
+                    <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                    <button id="send-button">Enviar</button>
+                </div>
+            </div>
+
+        </ul>
+
+
+
+
+    </div>
+
+
+    <div class="copy">
+        <h4>
+            &copy; Miguel Ferreira
+        </h4>
+
+        <a href="privacy.html">Politica de privacidade
+        </a>
+    </div>
+
+
+</footer>
+
+
+
+
+
+
+
+    <!-- AOS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- VLIBRAS  -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- SWIPER  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- BOXICONS  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="script/script.js"></script>
+
+
+
+</body>
+
+</html>

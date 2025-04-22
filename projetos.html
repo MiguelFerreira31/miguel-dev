@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOX ICONS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logoSenacria.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Projetos</title>
+</head>
+
+<body onload="preCarregamento();">
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+
+
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"></div>
+    </div>
+
+    <div class="content">
+
+        <header>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                                fill="#0393ac">
+                                <path
+                                    d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="index.html">Pagina Inicial</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#"><img src="./img/logomiguel.png" alt="Logo Senac"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Pagina Inicial</a></li>
+                    <li class="hideOnMobile"><a href="projetos.html">Projetos</a></li>
+                    <li class="hideOnMobile"><a href="contato.html">Contato</a></li>
+                    <li>
+                        <label>
+                            <input type="checkbox" class="theme-toggle-button">
+                            <span class="toggle"></span>
+                        </label>
+                    </li>
+                    <li class="menu-button" onclick="showSidebar()">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#0393ac">
+                                <path
+                                    d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <main>
+
+            <section id="especialidade-projeto">
+
+                <div class="especialidade-container">
+
+                    <div class="especialidade-txt">
+                        <h2>Estou aqui para entregar alta performance em todos os projetos.</h2>
+
+                        <div class="especialidade-card"><img src="./img/astronautalapis.png"
+                                alt=" astronauta em cima de um lapis" class="imgfloat">
+                            <div class="especialidade-card-txt">
+                                <h3>Projetos nativos e customizados. Não utilizo templates prontos nem theme builders.
+                                    <h3>
+                                        <hr>
+                            </div>
+
+
+                        </div>
+
+                        <div class="especialidade-card"><img src="./img/robo.png" alt="Robo" class="imgfloat">
+                            <div class="especialidade-card-txt">
+                                <h3>Projetos em conformidade à LGPD. Segurança e privacidade para seu negócio e seus
+                                    clientes.
+                                    <h3>
+                                        <hr>
+                            </div>
+                        </div>
+                        <div class="especialidade-card">
+                            <img src="./img/astronautafoguete.png" alt="astronauta em cima de um Foguete"
+                                class="imgfloat">
+
+
+                            <div class="especialidade-card-txt">
+                                <h3>Foco em performance. Projetos otimizados para melhor desempenho e SEO.
+                                    <h3>
+                                        <hr>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="especialidade-img">
+                        <div class="especialidade-img-inner">
+                            <img src="./img/mulher-site1.png" alt=" computador">
+                        </div>
+
+                        <a href="contato.html"><button id="btnEspecialista"> Fale Comigo</button></a>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </section>
+
+
+            <section id="projeto">
+                <div class="inner-header">
+                    <div class="waves-container">
+                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                            <defs>
+                                <path id="gentle-wave"
+                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(34, 34, 34, 0.7)" />
+                                <use xlink:href="#gentle-wave" x="48" y="3" fill="#222222" />
+                                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(34, 34, 34, 0.3)" />
+                                <use xlink:href="#gentle-wave" x="48" y="7" fill="#222222" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="header-content">
+
+                    </div>
+                </div>
+
+                <div class="titulo-projeto">
+                    <h2 data-aos="fade-right" data-aos-duration="1000">Veja Alguns dos nossos Projetos</h2>
+                    <hr data-aos="fade-left" data-aos-duration="1000">
+                </div>
+
+                <div class="projeto-container">
+
+                    <div class="projeto-inner">
+
+                        <div class="img-site">
+
+                            <div class="image-container">
+                                <img src="./img/wireframe1.jfif" alt="Imagem" class="image image1" id="siteImage"
+                                    data-aos="zoom-in-up" data-aos-duration="1000">
+                            </div>
+
+                        </div>
+                        <div class="img-site">
+                            <a href="https://silly-zabaione-fbccb6.netlify.app" target="_blank">
+                            <div class="image-container">
+                                <img src="./img/Wireframe2.png" alt="Imagem" data-aos="zoom-in" class="image"
+                                    id="siteImage"></a>
+                            </div>
+
+                        </div>
+                       
+                        <div class="img-site">
+
+                            <div class="image-container">
+                                <a href="https://brilliant-mochi-2ae046.netlify.app" target="_blank">
+                                <img src="./img/wireframe3.png" alt="Imagem" data-aos="zoom-out-up" class="image"
+                                    id="siteImage">
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </section>
+
+
+
+
+            <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i
+                class='bx bxs-chevrons-up'></i></button>
+
+        </main>
+
+
+
+        <footer>
+
+            <div class="footer-container">
+
+                <div class="footer-section">
+
+                    <ul>
+                        <li><a href="index.html">Pagina Inicial</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Veja Mais</h4>
+                    <div class="social-icons">
+                        <a href="https://wa.me/5511951863723?text=Quero fazer%20Meu%20Site"" target="_blank" class="social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                        <a href="https://github.com/MiguelFerreira31 " target="_blank" class="social-icon2"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/miguel-cezar-ferreira-b6a42825a/" target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer">
+
+
+                <ul>
+
+                    <div id="chat-icon"><i class='bx bx-message-square-detail'></i></div>
+
+                    <div id="chat-container">
+
+                        <div class="topo-chat">
+                            <ul>
+                                <li id="bot"><i class="bx bxs-bot"></i></li>
+                                <li id="titulo-bot">
+                                    <h5>Atendimento</h5>
+                                    <h6>Chat-boot</h6>
+                                </li>
+                            </ul>
+
+                            <button id="back-button">Fechar</button>
+                        </div>
+
+                        <div id="chat-messages"></div>
+                        <div class="enviar">
+                            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                            <button id="send-button">Enviar</button>
+                        </div>
+                    </div>
+
+                </ul>
+
+
+
+
+            </div>
+
+
+            <div class="copy">
+                <h4>
+                    &copy; Miguel Ferreira
+                </h4>
+
+                <a href="privacy.html">Politica de privacidade
+                </a>
+            </div>
+
+
+
+
+        </footer>
+
+
+
+
+    </div>
+
+
+    <!-- AOS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- VLIBRAS  -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- SWIPER  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- BOXICONS  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
