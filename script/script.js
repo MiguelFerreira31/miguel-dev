@@ -1,27 +1,39 @@
-// Inicializa a animação AOS
+// #region Inicialização de animações
 AOS.init();
+// #endregion
+
+// #region Skills - Barras de Progresso
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBars = document.querySelectorAll(".progress");
+    progressBars.forEach((bar) => {
+        const value = bar.getAttribute("data-value");
+        setTimeout(() => {
+            bar.style.width = `${value}%`;
+        }, 500);
+    });
+});
+// #endregion
 
 
-
-
+// #region Pré-carregamento
 const pre_carremento = document.querySelector(".pre-carregamento");
 
-function preCarregamento(){
+function preCarregamento() {
     pre_carremento.style.opacity = "0";
     pre_carremento.style.display = "none";
     setTimeout(() => {
         pre_carremento.style.display = "none";
     }, 5000);
 }
+// #endregion
 
+// #region Modo escuro/claro automático e manual
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.querySelector('.theme-toggle-button');
-    
 
     function switchMode() {
         const currentHour = new Date().getHours();
         const body = document.body;
-
         if (currentHour >= 18 || currentHour < 6) {
             body.classList.add('dark-mode');
             body.classList.remove('light-mode');
@@ -29,11 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('light-mode');
             body.classList.remove('dark-mode');
         }
-
-    
     }
-
-    
 
     function toggleThemeManually() {
         const body = document.body;
@@ -49,30 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
         updateFogueteImg();
     }
 
-    // Inicializa o tema e a imagem do foguete de acordo com a hora do dia
     switchMode();
-
-   
     setInterval(switchMode, 360000);
-
-    // Adiciona o evento de clique para alternar manualmente o tema
     toggleButton.addEventListener('click', toggleThemeManually);
 });
+// #endregion
 
-
-
+// #region Sidebar
 function showSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
+    document.querySelector('.sidebar').style.display = 'flex';
 }
+
 function hideSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
+    document.querySelector('.sidebar').style.display = 'none';
 }
+// #endregion
 
-
-
-// Configura o Swiper para a apresentação de slides
+// #region Swiper - Slides Gerais
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -83,70 +84,62 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
     breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        768: { slidesPerView: 3, spaceBetween: 30 },
+        1024: { slidesPerView: 4, spaceBetween: 40 },
     },
 });
+// #endregion
 
-
-// Carrousel card 
-
+// #region Swiper - Cards
 var swiper = new Swiper(".mySwiperCard", {
     slidesPerView: 1,
     spaceBetween: 10,
-    autoplay: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     loop: true,
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
-        clickable:true,
+        clickable: true,
     },
     breakpoints: {
-        640: {
-            slidesPerView: 2,
+        480: {         // smartphones pequenos
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        768: {         // tablets
+            slidesPerView: 1,
             spaceBetween: 20,
         },
-        768: {
-            slidesPerView: 3,
+        1024: {        // notebooks e desktops
+            slidesPerView: 2,
             spaceBetween: 30,
         },
-        1025: {
-            slidesPerView: 4,
+        1280: {        // telas grandes
+            slidesPerView: 3,
             spaceBetween: 40,
         },
     },
 });
 
+// #endregion
 
-
-
-// Carrousel Contato 
-
-
+// #region Swiper - Contato
 var swiper = new Swiper(".mySwiperContato", {
-    autoplay: true,
+    autoplay: { delay: 5000 },
     loop: true,
-    autoplay: {
-        delay: 5000, // Define o tempo de intervalo em milissegundos
-    },
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
-        clickable:true,
+        clickable: true,
     },
 });
+// #endregion
 
-
+// #region Contador animado
 function ativaContador() {
     $('.contador').each(function () {
         $(this).prop('Counter', 0).animate({
@@ -164,7 +157,6 @@ function ativaContador() {
     });
 }
 
-// Ativa o contador ao rolar a página
 $(window).scroll(function () {
     var alturaBody = $(window).height();
     var distanciaElemento = $('.contador').offset().top;
@@ -175,30 +167,18 @@ $(window).scroll(function () {
         ativaContador();
     }
 });
+// #endregion
 
-
-
-
-// Função para exibir texto animado
+// #region Texto animado (typewriter)
 document.addEventListener("DOMContentLoaded", function () {
     const titulo = document.querySelector('.titulo-principal');
-    const palavras = [
-        'Desenvolvedor',
-        'Front-End',
-        'SASS',
-        'Angular',
-        'React',
-        'PHP',
+    const palavras = ['Back-End', 'Front-End', 'SASS', 'Angular', 'React', 'PHP'];
 
-    ];
-
-    // Função para a animação de escrita
     function typeWrite(elemento, palavras) {
         let contador = 0;
         let textoAtual = '';
         let isDeleting = false;
 
-        // Função recursiva para escrever e apagar texto
         function escrever() {
             const palavraAtual = palavras[contador % palavras.length];
             textoAtual = isDeleting
@@ -225,9 +205,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeWrite(titulo, palavras);
 });
+// #endregion
 
-
-// Alterna a visibilidade do menu ao clicar no botão de menu
+// #region Menu mobile
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
     const navList = document.getElementById('nav-list');
@@ -236,23 +216,23 @@ document.addEventListener('DOMContentLoaded', function () {
         navList.classList.toggle('active');
     });
 });
+// #endregion
 
-// Mostra o botão de voltar ao topo ao rolar a página
+// #region Botão voltar ao topo
 let mybutton = document.getElementById("backToTopBtn");
 
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () { scrollFunction(); };
 
 function scrollFunction() {
     mybutton.style.display = (document.body.scrollTop > 10 || document.documentElement.scrollTop > 20) ? "block" : "none";
-
 }
 
-// Função para rolar a página até o topo
 function topFunction() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+// #endregion
 
-// Funções do chatbot
+// #region Chatbot
 const chatIcon = document.getElementById('chat-icon');
 const chatContainer = document.getElementById('chat-container');
 const chatMessages = document.getElementById('chat-messages');
@@ -260,17 +240,15 @@ const userInput = document.getElementById('user-input');
 const backButton = document.getElementById('back-button');
 const sendButton = document.getElementById('send-button');
 
-// Mensagens do chatbot
 const botMessages = {
-    "1": " eu construo, otimizo e mantenho sites responsivos e atrativos. Também ofereço design gráfico, SEO, e-commerce, suporte técnico, marketing digital e consultoria, garantindo uma presença online eficaz para alcançar o público-alvo e impulsionar negócios.<br><br>Digite Voltar para retornar ao menu inicial.",
-    "2": "valorizo a entrega pontual dos serviços. Com prazos bem definidos e comunicação transparente, garanto que cada projeto seja concluído dentro do cronograma acordado, atendendo às suas expectativas e necessidades sem comprometer a qualidade.<br><br>Digite Voltar para retornar ao menu inicial.",
-    "3": "ofereço diversas formas de pagamento para sua conveniência. Aceito transferências bancárias, cartões de crédito e débito, além de pagamentos via plataformas digitais. Trabalho com planos de pagamento flexíveis, permitindo parcelamentos que se ajustam ao seu orçamento, sempre com total transparência e segurança.<br><br>Digite Voltar para retornar ao menu inicial.",
-    "ajuda": "Olá, você está falando com nosso Boot de atendimento do Miguel Estou aqui para te ajudar a tirar suas dúvidas. Digite:<br><br>1 para dúvidas sobre nossos serviços<br><br>2 para dúvidas sobre nossa entrega de projeto<br><br>3 para dúvidas sobre formas de pagamento.<br><br>",
-    "voltar": "Olá, você está falando com nosso Boot de atendimento do Miguel. Estou aqui para te ajudar a tirar suas dúvidas. Digite:<br><br>1 para dúvidas sobre nossos serviços<br><br>2 para dúvidas sobre nossa entrega de projeto<br><br>3 para dúvidas sobre formas de pagamento.<br><br>",
-    "oi": "Digite abaixo o número referente à sua dúvida:<br><br>1 para dúvidas sobre nossos serviços<br><br>2 para dúvidas sobre nossa entrega de projeto<br><br>3 para dúvidas sobre formas de pagamento.<br><br>"
+    "1": " eu construo, otimizo e mantenho sites responsivos e atrativos...",
+    "2": "valorizo a entrega pontual dos serviços...",
+    "3": "ofereço diversas formas de pagamento...",
+    "ajuda": "Olá, você está falando com nosso Boot de atendimento do Miguel...",
+    "voltar": "Olá, você está falando com nosso Boot de atendimento do Miguel...",
+    "oi": "Digite abaixo o número referente à sua dúvida:..."
 };
 
-// Adiciona uma mensagem ao chat
 function addMessage(sender, message) {
     const messageElement = document.createElement('div');
     const icon = sender === 'Você' ? '<i class="bx bxs-user"></i> ' : '<i class="bx bxs-bot"></i>';
@@ -280,13 +258,11 @@ function addMessage(sender, message) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Envia uma mensagem do usuário e responde com uma mensagem do bot
 function sendMessage() {
     const userMessage = userInput.value.trim().toLowerCase();
     if (userMessage) {
         addMessage('Você', userMessage);
         userInput.value = '';
-
         setTimeout(() => {
             const botMessage = botMessages[userMessage] || "Desculpe, não entendi. Digite 'ajuda' para ver os comandos disponíveis.";
             addMessage('Atendimento', botMessage);
@@ -294,33 +270,29 @@ function sendMessage() {
     }
 }
 
-// Eventos para enviar mensagens
 userInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') sendMessage();
 });
 
 sendButton.addEventListener('click', sendMessage);
 
-// Abre o chat ao clicar no ícone
 chatIcon.addEventListener('click', () => {
     chatContainer.style.display = 'block';
 });
 
-// Fecha o chat ao clicar no botão de voltar
 backButton.addEventListener('click', () => {
     chatContainer.style.display = 'none';
 });
 
-// Mensagem inicial do chat
-addMessage('Atendimento', 'Olá, você está falando com nosso Boot de atendimento do Miguel :). Estou aqui para te ajudar a tirar suas dúvidas. Digite "oi" para começar.');
+addMessage('Atendimento', 'Olá, você está falando com nosso Boot de atendimento do Miguel :). Digite "oi" para começar.');
+// #endregion
 
-// Função para manipular a animação de blobs na página inicial
+// #region Animações de Blobs
 document.addEventListener('DOMContentLoaded', () => {
     const homeContainer = document.querySelector('.home-container');
     const images = document.querySelectorAll('.blobImage');
     let currentIndex = 0;
 
-    // Função para criar a explosão
     function createExplosion(x, y) {
         const explosion = document.createElement('div');
         explosion.className = 'explosion';
@@ -330,10 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         explosion.style.left = `${x}px`;
         explosion.style.top = `${y}px`;
         homeContainer.appendChild(explosion);
-
-        setTimeout(() => {
-            explosion.remove();
-        }, 500); // A explosão desaparecerá após 500 ms
+        setTimeout(() => { explosion.remove(); }, 500);
     }
 
     homeContainer.addEventListener('click', (event) => {
@@ -341,48 +310,62 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = (currentIndex + 1) % images.length;
         images[currentIndex].classList.add('active');
 
-        // Cria uma explosão na posição do clique
         const x = event.clientX - homeContainer.offsetLeft;
         const y = event.clientY - homeContainer.offsetTop;
         createExplosion(x, y);
     });
 
+    const handleHoverEffect = (image, offset) => {
+        image.addEventListener('mouseover', () => {
+            image.style.transform = `translateY(-${offset}%)`;
+        });
+        image.addEventListener('mouseout', () => {
+            image.style.transform = 'translateY(0)';
+        });
+    };
 
-    const image = document.getElementById('siteImage');
-
-    image.addEventListener('mouseover', () => {
-        image.style.transform = 'translateY(-30%)';
-    });
-  
-    image.addEventListener('mouseout', () => {
-        image.style.transform = 'translateY(0)';
-    });
-  
-    const image2 = document.getElementById('siteImage2');
-  
-    image2.addEventListener('mouseover', () => {
-        image2.style.transform = 'translateY(-37%)';
-    });
-  
-    image2.addEventListener('mouseout', () => {
-        image2.style.transform = 'translateY(0)';
-    });
-  
-    const image3 = document.getElementById('siteImage3');
-  
-    image3.addEventListener('mouseover', () => {
-        image3.style.transform = 'translateY(-37%)';
-    });
-  
-    image3.addEventListener('mouseout', () => {
-        image3.style.transform = 'translateY(0)';
-    });
-  
-
-
-
-
+    handleHoverEffect(document.getElementById('siteImage'), 30);
+    handleHoverEffect(document.getElementById('siteImage2'), 37);
+    handleHoverEffect(document.getElementById('siteImage3'), 37);
 });
+// #endregion
+document.addEventListener('DOMContentLoaded', function () {
+    const modalElement = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoSource = document.getElementById('modalVideoSource');
+    const bootstrapModal = new bootstrap.Modal(modalElement);
 
+    // Clique no botão "Ver Mais" dentro de cada item
+    document.querySelectorAll('.item').forEach(item => {
+      const button = item.querySelector('button');
+      if (button) {
+        button.addEventListener('click', (e) => {
+          e.stopPropagation(); // evitar propagação desnecessária
+          const videoSrc = item.getAttribute('data-video');
 
+          if (videoSrc) {
+            modalVideo.pause();
+            modalVideoSource.src = videoSrc;
+            modalVideo.load();
+            bootstrapModal.show();
+            modalVideo.play();
+          }
+        });
+      }
+    });
 
+    // Pausar vídeo ao fechar o modal
+    modalElement.addEventListener('hidden.bs.modal', () => {
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+    });
+
+    // Reproduzir os vídeos pequenos no hover
+    document.querySelectorAll('.item video').forEach(video => {
+      video.addEventListener('mouseenter', () => video.play());
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+  });

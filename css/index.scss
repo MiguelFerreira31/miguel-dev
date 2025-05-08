@@ -607,6 +607,7 @@ html {
             #home {
                 @include area();
                 flex-direction: column;
+                // #region blob 
 
                 .bgImage {
                     margin: 0;
@@ -674,6 +675,8 @@ html {
                     }
                 }
 
+                // #endregion
+
                 .home-container {
                     width: 100%;
                     height: 100%;
@@ -686,6 +689,73 @@ html {
                         height: 100%;
                         @include flex-center();
 
+                        // 🔁 Animações globais
+                        @keyframes shine {
+                            0% {
+                                background-position: 0;
+                            }
+
+                            60%,
+                            100% {
+                                background-position: 400px;
+                            }
+                        }
+
+                        @keyframes typewriter {
+
+                            0%,
+                            10% {
+                                width: 0px;
+                            }
+
+                            25%,
+                            75% {
+                                width: 160px;
+                            }
+
+                            90%,
+                            100% {
+                                width: 0px;
+                            }
+                        }
+
+                        @keyframes blinkTextCursor {
+                            from {
+                                border-right-color: rgba(255, 255, 255, 0.75);
+                            }
+
+                            to {
+                                border-right-color: transparent;
+                            }
+                        }
+
+                        @keyframes pisca {
+
+                            0%,
+                            100% {
+                                opacity: 1;
+                            }
+
+                            50% {
+                                opacity: 0;
+                            }
+                        }
+
+                        @keyframes glowing {
+                            0% {
+                                background-position: 0 0;
+                            }
+
+                            50% {
+                                background-position: 400% 0;
+                            }
+
+                            100% {
+                                background-position: 0 0;
+                            }
+                        }
+
+                        // 🎯 Estilo principal
                         ul {
                             width: 100%;
                             height: 100%;
@@ -695,146 +765,83 @@ html {
                             .titulo {
                                 width: 100%;
                                 @include flex-center();
-                                justify-content: left;
+                                justify-content: flex-start;
                                 padding: 5% 0 0 4%;
-                                height: 40%;
+                                height: 10%;
+                                flex-wrap: wrap;
 
                                 .nome {
-                                    font-size: 4.2em;
-                                    width: 24%;
+                                    font-size: clamp(2em, 4vw, 4em);
+                                    width: 30%;
                                     @include flex-center();
+                                    justify-content: flex-end;
+
                                     background: linear-gradient(to right, #727272 0, white 10%, #727272 20%);
                                     background-position: 0;
                                     -webkit-background-clip: text;
                                     -webkit-text-fill-color: transparent;
+
                                     animation: shine 5s infinite linear alternate-reverse;
                                     animation-fill-mode: forwards;
+
                                     -webkit-text-size-adjust: none;
                                     text-decoration: none;
                                     white-space: nowrap;
-
-                                    @keyframes shine {
-                                        0% {
-                                            background-position: 0;
-                                        }
-
-                                        60% {
-                                            background-position: 400px;
-                                        }
-
-                                        100% {
-                                            background-position: 400px;
-                                        }
-                                    }
-
                                 }
-
 
                                 .titulo-principal {
-                                    max-width: 80%;
+                                    width: 40%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
                                     text-align: center;
+
                                     font-family: "Courier New", Courier, monospace;
                                     color: #0eb6cc;
-                                    font-size: 4.2em;
+                                    font-size: clamp(2.5em, 4.2vw, 4.2em);
 
-                                }
-
-                                .titulo-principal .line {
-                                    position: relative;
-                                    border-right: 2px solid rgba(255, 255, 255, 0.75);
-                                    font-size: 180%;
-                                    text-align: center;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                }
-
-                                @keyframes typewriter {
-                                    0% {
-                                        width: 0px;
+                                    .line {
+                                        position: relative;
+                                        border-right: 2px solid rgba(255, 255, 255, 0.75);
+                                        font-size: 180%;
+                                        text-align: center;
+                                        white-space: nowrap;
+                                        overflow: hidden;
                                     }
 
-                                    10% {
-                                        width: 0px;
+                                    .anim-typewriter {
+                                        animation: typewriter 4s steps(9) 500ms infinite,
+                                            blinkTextCursor 500ms steps(11) infinite normal;
                                     }
 
-                                    25% {
-                                        width: 160px;
-                                    }
-
-                                    75% {
-                                        width: 160px;
-                                    }
-
-                                    90% {
-                                        width: 0px;
-                                    }
-
-                                    100% {
-                                        width: 0px;
-                                    }
-                                }
-
-                                @keyframes blinkTextCursor {
-                                    from {
-                                        border-right-color: rgba(255, 255, 255, 0.75);
-                                    }
-
-                                    to {
-                                        border-right-color: transparent;
-                                    }
-                                }
-
-                                .titulo-principal .anim-typewriter {
-                                    animation: typewriter 4s steps(9) 500ms infinite, blinkTextCursor 500ms steps(11) infinite normal;
-                                }
-
-                                .titulo-principal:after {
-                                    content: "|";
-                                    opacity: 1;
-                                    animation: pisca 0.7s infinite;
-                                }
-
-                                @keyframes pisca {
-
-                                    0%,
-                                    100% {
+                                    &:after {
+                                        content: "|";
                                         opacity: 1;
-                                    }
-
-                                    50% {
-                                        opacity: 0;
+                                        animation: pisca 0.7s infinite;
                                     }
                                 }
-
-
-
-
                             }
-
-
 
                             .li2 {
                                 width: 100%;
                                 @include flex-center();
                                 flex-direction: column;
-                                justify-content: right;
-                                padding: 3%;
+                                justify-content: flex-end;
                                 font-size: 1.5em;
                                 text-align: right;
                                 letter-spacing: 0.5px;
                                 height: 20%;
 
-
                                 h3 {
                                     width: 100%;
                                     @include flex-center();
-                                    justify-content: right;
+                                    justify-content: flex-end;
                                 }
 
                                 .social-icons {
                                     width: 80%;
                                     @include flex-center();
-                                    justify-content: right;
+                                    justify-content: flex-end;
                                     gap: 10px;
                                     padding: 1% 10% 0 0;
 
@@ -848,8 +855,7 @@ html {
                                         border-radius: 50%;
                                         @include flex-center();
                                         cursor: url('../img/pointer.png'), pointer;
-
-                                        transition: .5s;
+                                        transition: 0.5s;
                                         margin-inline: 1%;
                                         font-size: 1.1em;
 
@@ -859,23 +865,16 @@ html {
                                             transform: scale(1.1);
                                             box-shadow: 0 4px 8px 0 $colorBg1;
                                         }
-
-
                                     }
                                 }
-
                             }
-
-
 
                             .li3 {
                                 width: 100%;
                                 @include flex-center();
-                                padding: 4%;
-                                height: 40%;
+                                height: 20%;
 
                                 #btnHome {
-
                                     text-align: center;
                                     width: 300px;
                                     padding: 8%;
@@ -890,7 +889,7 @@ html {
                                     font-size: 1.02em;
                                     letter-spacing: 2px;
                                     font-weight: bolder;
-                                    transition: .5s;
+                                    transition: 0.5s;
                                     cursor: url('../img/pointer.png'), pointer;
 
                                     &:hover {
@@ -913,86 +912,160 @@ html {
                                         height: calc(100% + 4px);
                                         animation: glowing 20s linear infinite;
                                         opacity: 0;
-                                        transition: opacity .5s ease-in-out;
+                                        transition: opacity 0.5s ease-in-out;
                                         box-shadow: 0 4px 8px 0 #00dbf894;
-                                        text-decoration: underline;
+                                    }
+
+                                    &:hover:before {
+                                        opacity: 1;
+                                    }
+
+                                    &:after {
+                                        z-index: -1;
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: #11111177;
+                                        left: 0;
+                                        top: 0;
+                                        border-radius: 10px;
                                     }
 
                                     &:active:after {
                                         color: #00dbf8;
                                         background: transparent;
                                     }
-
-                                    #btnHome:after {
-                                        z-index: -1;
-                                        content: '';
-                                        position: absolute;
-                                        width: 100%;
-                                        height: 100%;
-                                        background: #111;
-                                        left: 0;
-                                        top: 0;
-                                        border-radius: 10px;
-                                    }
-
-                                    @keyframes glowing {
-                                        0% {
-                                            background-position: 0 0;
-                                        }
-
-                                        50% {
-                                            background-position: 400% 0;
-                                        }
-
-                                        100% {
-                                            background-position: 0 0;
-                                        }
-                                    }
+                                }
+                            }
 
 
 
-
+                            @media screen and (max-width: 1440px) {
+                                .titulo {
+                                    padding: 0;
+                                    align-items: flex-end;
                                 }
 
-
-                                #btnHome:hover:before {
-                                    opacity: 1;
-
-                                }
-
-                                #btnHome:after {
-                                    z-index: -1;
-                                    content: '';
-                                    position: absolute;
+                                .nome {
                                     width: 100%;
-                                    height: 100%;
-                                    background: #11111177;
-                                    left: 0;
-                                    top: 0;
-                                    border-radius: 10px;
-
+                                    font-size: 3.5em;
+                                    justify-content: center;
+                                    text-align: center;
+                                    margin-inline: 5% !important;
                                 }
 
+                                .titulo-principal {
+                                    font-size: 3em;
+                                    width: 100%;
+                                }
+                            }
+
+                            @media screen and (max-width: 1025px) {
+                                .titulo {
+                                    margin-right: -10%;
+                                    height: 40%;
+                                    width: 90%;
+                                    justify-content: space-evenly;
 
 
+                                    .nome {
+                                        width: 40%;
+                                        justify-content: flex-start;
+                                        margin: 0 !important;
+                                        font-size: 3em;
+
+                                    }
 
 
+                                    .titulo-principal {
+                                        width: 60%;
+                                        font-size: 3em;
+                                        justify-content: flex-start;
+                                        margin: 0 !important;
+                                    }
+                                }
 
-
+                                .li2 {
+                                    margin-left: -5%;
+                                    letter-spacing: -0.5px;
+                                }
 
                             }
+
+                            @media screen and (max-width: 769px) {
+                                .titulo {
+                                    width: 80%;
+                                    flex-direction: column !important;
+                                    height: 30%;
+
+                                    justify-content: flex-end;
+
+                                    .nome {
+                                        width: 100%;
+                                        font-size: 2.5em;
+                                    }
+
+                                    .titulo-principal {
+                                        width: 100%;
+                                        font-size: 2.2em;
+                                    }
+                                }
+
+                                .li2 {
+                                    margin: 0;
+                                    justify-content: center;
+
+                                    h3 {
+                                        justify-content: center;
+                                    }
+
+                                    .social-icons {
+                                        padding: 0;
+                                        justify-content: center;
+
+                                    }
+                                }
+                            }
+                        }
+
+
+
+                        @media screen and (max-width:1025px) {
+
+                            ul {
+                                justify-content: space-evenly;
+                            }
+
 
 
                         }
 
+
+                        @media screen and (max-width:768px) {
+                            ul {
+                                text-align: center;
+
+
+                                .li2 {
+                                    text-align: center;
+                                }
+                            }
+
+                        }
+
+
+
+
                     }
-
-
-
 
                 }
 
             }
+
+
+            @media screen and (max-width:768px) {}
+
 
             #cliente {
                 height: 45vh;
@@ -1009,8 +1082,9 @@ html {
                     width: 100%;
                     height: 40%;
                     @include flex-center();
+                    justify-content: space-evenly;
                     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.404);
-                    margin: 2%;
+
                     border-radius: 12px;
                     background-color: rgb(255, 255, 255);
 
@@ -1049,6 +1123,44 @@ html {
                     }
                 }
 
+                @media screen and (max-width: 769px) {
+                    .titulo {
+                        width: 90%;
+                        margin: 0 !important;
+
+                        .foguete-gif {
+                            width: 15%;
+
+                        }
+
+                        h2 {
+                            width: 70%;
+                            font-size: 2em;
+                        }
+
+
+                    }
+
+                    .cliente-container {
+                        width: 80%;
+                    }
+
+
+
+                }
+
+                @media screen and (max-width: 480px) {
+                    .titulo {
+
+                        h2 {
+                            width: 80%;
+                            font-size: 1.5em;
+                        }
+
+                    }
+
+                }
+
             }
 
 
@@ -1085,11 +1197,16 @@ html {
 
                         img {
                             width: 400px;
-                            animation-name: floating;
-                            animation-duration: 6s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: ease-in-out;
+                            height: 400px;
                             border-radius: 50%;
+                            background: linear-gradient(45deg, #005260, #00bcd4, #005260);
+                            background-size: 400% 400%;
+                            animation: floating 6s ease-in-out infinite, gradientShift 8s ease infinite;
+                            transition: box-shadow 0.4s ease;
+
+                            &:hover {
+                                box-shadow: 0 10px 25px rgba(0, 82, 96, 0.6);
+                            }
 
                             @keyframes floating {
                                 0% {
@@ -1101,10 +1218,25 @@ html {
                                 }
 
                                 100% {
-                                    transform: translate(0, -0px);
+                                    transform: translate(0, 0px);
+                                }
+                            }
+
+                            @keyframes gradientShift {
+                                0% {
+                                    background-position: 0% 50%;
+                                }
+
+                                50% {
+                                    background-position: 100% 50%;
+                                }
+
+                                100% {
+                                    background-position: 0% 50%;
                                 }
                             }
                         }
+
                     }
 
 
@@ -1145,6 +1277,83 @@ html {
 
             }
 
+
+            @media screen and (max-width: 769px) {
+                #sobre {
+                    height: 145dvh;
+
+                    .sobre-container {
+
+                        flex-direction: column;
+
+                        .sobreImg {
+                            height: 30%;
+
+                            img {
+                                width: 300px;
+                                height: 300px;
+                                animation: none;
+                            }
+                        }
+
+
+                        ul {
+                            width: 100%;
+
+
+                            li {
+
+                                p {
+                                    width: 80%;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            @media screen and (max-width: 480px) {
+                #sobre {
+                    height: 155dvh;
+
+                    .sobre-container {
+                        flex-direction: column;
+
+                        .sobreImg {
+                            height: 20%;
+                            width: 100%;
+                            @include flex-center();
+                            justify-content: flex-start;
+
+                            img {
+                                width: 200px;
+                                height: 200px;
+                                animation: none;
+                            }
+                        }
+
+
+                        ul {
+                            height: 80%;
+                            width: 100%;
+                            margin-top: -20%;
+
+                            li {
+
+                                p {
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+
             #service {
                 height: 120vh;
                 width: 100%;
@@ -1176,14 +1385,15 @@ html {
                             width: 100%;
                             height: 100%;
                         }
-                    }
 
+                    }
 
                 }
 
                 //  #region Waves Animation
 
                 .parallax>use {
+
                     animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
                 }
 
@@ -1206,8 +1416,22 @@ html {
 
 
                 // #endregion 
+                @media screen and (max-width: 1025px) {
 
-                @media (max-width: 769px) {
+
+
+                    .inner-header {
+                        height: 10%;
+                    }
+
+                    .waves-container {
+                        height: 40px;
+                        min-height: 40px;
+                    }
+                }
+
+
+                @media screen and (max-width: 769px) {
 
                     .inner-header {
                         height: 12%;
@@ -1219,9 +1443,10 @@ html {
                     }
                 }
 
-                @media (max-width: 480px) {
+                @media screen and (max-width: 480px) {
                     .inner-header {
                         height: 4%;
+                        display: none;
                     }
 
                     .waves-container {
@@ -1263,7 +1488,7 @@ html {
                         justify-content: space-around;
 
                         .service-cards {
-                            width: 50%;
+                            width: 70%;
                             height: 100%;
                             @include flex-center();
                             flex-direction: column;
@@ -1333,6 +1558,8 @@ html {
                                             border: 1px solid #b486ff;
                                             border-radius: 12px;
                                         }
+
+
                                     }
                                 }
 
@@ -1419,7 +1646,6 @@ html {
 
                             }
 
-
                             .card3 {
 
                                 width: 100%;
@@ -1501,15 +1727,30 @@ html {
 
                             }
 
+                            h3 {
+                                font-size: 1.5em;
+                            }
+
+                            p {
+                                font-size: 1em;
+
+                            }
+
                         }
 
 
-                        .imgfloat {
+                        #imgservice {
                             width: 500px;
-                            animation-name: floating;
-                            animation-duration: 6s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: ease-in-out;
+                            height: 500px;
+                            border-radius: 50%;
+                            background: linear-gradient(45deg, #012c34, #047483, #012c34);
+                            background-size: 400% 400%;
+                            animation: floating 6s ease-in-out infinite, gradientShift 8s ease infinite;
+                            transition: box-shadow 0.4s ease;
+
+                            &:hover {
+                                box-shadow: 0 10px 25px rgba(0, 82, 96, 0.6);
+                            }
 
                             @keyframes floating {
                                 0% {
@@ -1517,11 +1758,25 @@ html {
                                 }
 
                                 50% {
-                                    transform: translate(0, 45px);
+                                    transform: translate(0, 18px);
                                 }
 
                                 100% {
-                                    transform: translate(0, -0px);
+                                    transform: translate(0, 0px);
+                                }
+                            }
+
+                            @keyframes gradientShift {
+                                0% {
+                                    background-position: 0% 50%;
+                                }
+
+                                50% {
+                                    background-position: 100% 50%;
+                                }
+
+                                100% {
+                                    background-position: 0% 50%;
                                 }
                             }
 
@@ -1529,7 +1784,16 @@ html {
                         }
 
                         img {
-                            width: 600px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: fill;
+                        }
+
+
+                        @media screen and (max-width: 1025px) {
+                            #imgservice {
+                                display: none;
+                            }
                         }
 
                     }
@@ -1537,39 +1801,105 @@ html {
 
             }
 
+            @media screen and (max-width: 769px) {
+                #service {
+                    height: 110dvh;
+
+                    .service-container {
+
+                        .service-inner {
+
+
+                            .service-cards {
+                                width: 100%;
+                            }
+                        }
+
+
+
+                    }
+
+
+                }
+
+
+
+            }
+
+
+            @media screen and (max-width: 480px) {
+                #service {
+                    height: 160dvh;
+
+                    .service-container {
+
+                        .service-inner {
+
+
+                            .service-cards {
+
+                                ul {
+                                    flex-direction: column;
+
+                                    li {
+                                        img {
+                                            width: 40px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
+                    }
+
+
+                }
+
+
+
+            }
+
+
             #depoimento {
                 height: 120vh;
                 width: 100%;
+                margin-top: -1%;
 
-                .titulo {
-                    @include flex-center();
-                    justify-content: flex-end;
-                    flex-direction: column;
-                    background-image: url('../img/fundonavbarResponsivo.png');
-                    background-repeat: no-repeat;
-                    text-align: center;
-                    height: 25%;
-                    width: 100%;
 
-                    h2 {
-                        margin-block: 6px;
-                        font-size: $subtitleDefault+1.2;
-                    }
 
-                    hr {
-                        width: 100px;
-                    }
-                }
 
                 .depoimento-container {
                     width: 100%;
                     height: 100%;
+                    @include flex-center();
+                    flex-direction: column;
 
                     .titulo {
-                        height: 15%;
-                        background-image: none;
+                        width: 100%;
+                        height: 25%;
+                        margin-top: 5%;
+                        @include flex-center();
+                        flex-direction: column;
+                        background-image: url('../img/fundonavbarresponsivo.png') !important;
+                        background-position: top;
+                        background-repeat: no-repeat;
                         @include flex-center();
                         justify-content: flex-start;
+
+
+                        h2 {
+                            margin-block: 6px;
+                            font-size: $subtitleDefault+1.2;
+                            margin-top: 2%;
+                        }
+
+                        hr {
+
+                            width: 100px;
+                        }
+
 
                         ul {
                             width: 40%;
@@ -1594,9 +1924,15 @@ html {
                     }
 
                     .swiper {
+                        width: 100%;
                         @include container();
-                        height: 60%;
+                        height: 65%;
                         @include flex-center();
+
+                    }
+
+                    .swiper-wrapper {
+                        align-items: center;
                     }
 
 
@@ -1709,7 +2045,9 @@ html {
                         background-color: $colorBg1;
                         width: 10px;
                         height: 10px;
-                        transition: background-color 0.3s;
+                        border-radius: 1px;
+                        transition: 0.3s;
+
                         cursor: url("../img/pointer.png"), pointer;
 
                         &:hover {
@@ -1720,24 +2058,158 @@ html {
 
                     .swiper-pagination-bullet-active {
                         background-color: $colorBg2;
-                        width: 11px;
-                        height: 11px;
-
+                        width: 20px;
+                        height: 10px;
+                        border-radius: 12px;
                     }
 
 
                 }
+
+
+
+
             }
+
+            @media screen and (max-width: 1025px) {
+                #depoimento {
+                    height: 170dvh;
+
+                    .titulo {
+
+                        h2 {
+                            font-size: 2.5em !important;
+                            margin-top: 5% !important;
+                        }
+                    }
+
+                    .swiper {
+
+                        width: 90% !important;
+                    }
+
+                    .swiper-slide {
+
+                        width: 90%;
+                    }
+
+
+                }
+
+
+            }
+
+            @media screen and (max-width: 480px) {
+                #depoimento {
+                    height: 150dvh;
+
+                    .titulo {
+                        height: 10% !important;
+                        margin-bottom: -13% !important;
+
+                        h2 {
+                            margin-top: 10% !important;
+                        }
+                    }
+
+
+                    .swiper {
+                        margin-top: 15% !important;
+                        height: 60%;
+                    }
+
+                }
+
+
+
+
+
+
+
+
+            }
+
+            #portifolio {
+                @include area();
+                @include flex-center();
+
+                .portifolio-container {
+                    height: 100%;
+                   width: 100%;
+                    @include flex-center();
+
+
+                    .item {
+                        width: 30%;
+                        height: 100%;
+                        @include flex-center();
+                        flex-direction: column;
+
+                        video {
+                            width: 95%;
+                           
+                        }
+                    }
+
+                }
+
+            }
+
 
             #habilidades {
                 @include area();
 
-                .habilidaes-container {
+                .habilidades-container {
                     @include container();
                     height: 100%;
                     @include flex-center();
+
+                    .div-child-2 {
+                        width: 50%;
+
+                        .statistic {
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 20px;
+                        }
+
+                        h3 {
+                            color: white;
+                            font-weight: 500;
+                            text-align: center;
+                            font-size: 2rem;
+                        }
+
+                        .progress-bar {
+                            background-color: #444;
+                            border-radius: 15px;
+                            overflow: hidden;
+                            height: 20px;
+                            width: 100%;
+                            max-width: 400px;
+                            margin: 0 auto;
+                            filter: drop-shadow(0 0 5px #4ad2954b);
+                        }
+
+                        .progress {
+                            background-color: $colorSecondary; // ou #4AD295 se preferir direto
+                            height: 100%;
+                            width: 0;
+                            transition: width 1s ease-in-out;
+                            border-radius: 15px;
+                            filter: drop-shadow(0 0 5px $colorSecondary);
+                        }
+
+                        .percentage {
+                            text-align: center;
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                            color: #4AD295;
+                        }
+                    }
                 }
             }
+
 
 
             #backToTopBtn {
@@ -2668,6 +3140,7 @@ html {
                     display: flex;
                     justify-content: center;
                     gap: 10px;
+
                     .social-icon {
                         background: $colorBg1;
                         backdrop-filter: blur(10.5px);
@@ -2689,6 +3162,7 @@ html {
                             box-shadow: 0 4px 8px 0 $colorBg1;
                         }
                     }
+
                     .social-icon2 {
                         background: $colorBg1;
                         backdrop-filter: blur(10.5px);
@@ -2736,6 +3210,7 @@ html {
                     color: $colorBg1;
                     text-decoration: underline;
                     transition: .5s;
+
                     &:hover {
                         transform: scale(1.2);
                     }
@@ -2778,6 +3253,7 @@ html {
                     z-index: 9999;
                     transition: .5s;
                     animation: blobNew 12s infinite ease-in-out;
+
                     &:hover {
                         background-color: #0095b7;
                         transform: scale(1.1);
@@ -2835,15 +3311,18 @@ html {
                             width: 50%;
                             height: 100%;
                             @include flex-center();
+
                             li {
                                 padding: 0 5%;
                                 @include flex-center();
                                 flex-direction: column;
                             }
+
                             #bot {
                                 background-color: #02a5f0;
                                 border-radius: 50%;
                                 padding: 5%;
+
                                 i {
                                     font-size: 1.1em;
                                 }
@@ -2854,6 +3333,7 @@ html {
                                     letter-spacing: 1px;
                                     font-size: 0.9em;
                                 }
+
                                 h6 {
                                     color: rgb(187, 187, 187);
                                 }
@@ -2930,6 +3410,7 @@ html {
                             margin: 0 0 0 5%;
                             cursor: url('../img/pointer.png'), pointer;
                             transition: .5s;
+
                             &:hover {
                                 transition: .5s;
                                 background: $colorBg2;
@@ -2939,6 +3420,7 @@ html {
                             }
                         }
                     }
+
                     .message-container {
                         margin: 20px;
                         padding: 10px;
@@ -2970,6 +3452,7 @@ html {
                         }
                     }
                 }
+
                 /* #endregion  */
 
             }
