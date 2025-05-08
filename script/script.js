@@ -288,6 +288,7 @@ addMessage('Atendimento', 'Olá, você está falando com nosso Boot de atendimen
 // #endregion
 
 // #region Animações de Blobs
+
 document.addEventListener('DOMContentLoaded', () => {
     const homeContainer = document.querySelector('.home-container');
     const images = document.querySelectorAll('.blobImage');
@@ -329,6 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
     handleHoverEffect(document.getElementById('siteImage3'), 37);
 });
 // #endregion
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const modalElement = document.getElementById('videoModal');
     const modalVideo = document.getElementById('modalVideo');
@@ -369,3 +373,29 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+
+
+
+  function playVideo(item) {
+    const video = item.querySelector('video');
+    if (video) video.play();
+  }
+  
+  function pauseVideo(item) {
+    const video = item.querySelector('video');
+    if (video) video.pause();
+  }
+  
+  function openVideoModal(src) {
+    const modalVideo = document.getElementById('modalVideo');
+    modalVideo.src = src;
+    const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+    videoModal.show();
+  
+    // Parar vídeo quando o modal for fechado
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+    }, { once: true });
+  }

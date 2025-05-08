@@ -2004,31 +2004,6 @@ html body main #depoimento .depoimento-container .swiper-pagination-bullet-activ
     height: 60%;
   }
 }
-html body main #portifolio {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-html body main #portifolio .portifolio-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-html body main #portifolio .portifolio-container .item {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-html body main #portifolio .portifolio-container .item video {
-  width: 95%;
-}
 html body main #habilidades {
   height: 100vh;
   width: 100%;
@@ -2752,6 +2727,81 @@ html body main #privacy .privacy-container .privacy-inner h3 {
 html body main #privacy .privacy-container .privacy-inner p {
   padding-inline: 20%;
   text-align: center;
+}
+html body main #portifolio {
+  height: 100vh;
+  width: 100%;
+  height: 150dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body main #portifolio .portifolio-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body main #portifolio .portifolio-container .item {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+html body main #portifolio .portifolio-container .item video {
+  width: 35%;
+  border-radius: 12px;
+}
+html body main #portifolio .portifolio-container .item article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 40%;
+  height: 50%;
+}
+html body main #portifolio .portifolio-container .item article .btn-itens {
+  width: 30%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+html body main #portifolio .portifolio-container .item article .btn-itens a {
+  width: 40%;
+  text-decoration: none;
+}
+html body main #portifolio .portifolio-container .item article .btn-itens a i {
+  background: #0393ac;
+  opacity: 0.7;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  color: white;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("../img/pointer.png"), pointer;
+  transition: 0.5s;
+  animation: blobNew 12s infinite ease-in-out;
+  font-size: 1.5em;
+}
+html body main #portifolio .portifolio-container .item article .btn-itens a i:hover {
+  opacity: 1.7;
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 #0393ac;
+}
+html body main #portifolio .portifolio-container .item article .btn-itens a i:nth-child(2) {
+  animation: blobBack 10s infinite ease-in-out;
 }
 html body footer {
   width: 100%;

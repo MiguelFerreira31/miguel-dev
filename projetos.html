@@ -129,7 +129,7 @@
 
                     <div class="especialidade-img">
                         <div class="especialidade-img-inner">
-                            <img src="./img/mulher-site1.png" alt=" computador">
+                            <img src="./img/astronautafoguete.png" alt=" computador">
                         </div>
 
                         <a href="contato.html"><button id="btnEspecialista"> Fale Comigo</button></a>
@@ -213,32 +213,84 @@
 
                 <div class="portifolio-container">
 
-                    <div class="item" data-video="img/devcyle.mp4">
-                        <video src="img/devcyle.mp4" muted loop></video>
+                    <div class="item">
+                        <video src="img/devcyle.mp4" muted loop onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)"
+                        onclick="openVideoModal('img/devcyle.mp4')" ></video>
                         <article>
-                          <h3>DevCycle</h3>
-                          <button class="btn btn-primary">Ver Mais</button>
+                            <h3>DevCycle</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tempora placeat
+                                reprehenderit voluptatem alias molestiae minus quidem molestias esse corporis?</p>
+                            <div class="btn-itens">
+                                <a href="#"><i class='bx bxl-github'></i></a>
+                                <a href="#"><i class='bx bx-code-alt'></i></a>
+                            </div>
                         </article>
-                      </div>
-                      
-                      <div class="item" data-video="img/videoservice.mp4">
-                        <video src="img/videoservice.mp4" muted loop></video>
-                        <article>
-                          <h3>Outro Projeto</h3>
-                          <button class="btn btn-primary">Ver Mais</button>
-                        </article>
-                      </div>
+                    </div>
 
+                    <!-- Modal -->
+                    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <video id="modalVideo" class="w-100" controls></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="item">
-                        <video src="img/devcyle.mp4" autoplay muted loop></video>
+                      
                         <article>
                             <h3>DevCycle</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit natus cumque architecto at
-                                illum, eligendi quibusdam voluptatum dicta cupiditate odio.</p>
-                            <a href="#"><button>Ver Mais</button></a>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tempora placeat
+                                reprehenderit voluptatem alias molestiae minus quidem molestias esse corporis?</p>
+                            <div class="btn-itens">
+                                <a href="#"><i class='bx bxl-github'></i></a>
+                                <a href="#"><i class='bx bx-code-alt'></i></a>
+                            </div>
                         </article>
+
+                        <video src="img/devcyle.mp4" muted loop onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)"
+                        onclick="openVideoModal('img/devcyle.mp4')" ></video>
+
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <video id="modalVideo" class="w-100" controls></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <video src="img/devcyle.mp4" muted loop onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)"
+                        onclick="openVideoModal('img/devcyle.mp4')" ></video>
+                        <article>
+                            <h3>DevCycle</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tempora placeat
+                                reprehenderit voluptatem alias molestiae minus quidem molestias esse corporis?</p>
+                            <div class="btn-itens">
+                                <a href="#"><i class='bx bxl-github'></i></a>
+                                <a href="#"><i class='bx bx-code-alt'></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <video id="modalVideo" class="w-100" controls></video>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
