@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // #endregion
 
-
 // #region Pré-carregamento
 const pre_carremento = document.querySelector(".pre-carregamento");
 
@@ -84,9 +83,10 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
     breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        768: { slidesPerView: 3, spaceBetween: 30 },
-        1024: { slidesPerView: 4, spaceBetween: 40 },
+        640: { slidesPerView: 1, spaceBetween: 20 },
+        768: { slidesPerView: 2, spaceBetween: 30 },
+        1024: { slidesPerView: 3, spaceBetween: 40 },
+        1200: { slidesPerView: 4, spaceBetween: 40 },
     },
 });
 // #endregion
@@ -333,69 +333,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const modalElement = document.getElementById('videoModal');
-    const modalVideo = document.getElementById('modalVideo');
-    const modalVideoSource = document.getElementById('modalVideoSource');
-    const bootstrapModal = new bootstrap.Modal(modalElement);
-
-    // Clique no botão "Ver Mais" dentro de cada item
-    document.querySelectorAll('.item').forEach(item => {
-      const button = item.querySelector('button');
-      if (button) {
-        button.addEventListener('click', (e) => {
-          e.stopPropagation(); // evitar propagação desnecessária
-          const videoSrc = item.getAttribute('data-video');
-
-          if (videoSrc) {
-            modalVideo.pause();
-            modalVideoSource.src = videoSrc;
-            modalVideo.load();
-            bootstrapModal.show();
-            modalVideo.play();
-          }
-        });
-      }
-    });
-
-    // Pausar vídeo ao fechar o modal
-    modalElement.addEventListener('hidden.bs.modal', () => {
-      modalVideo.pause();
-      modalVideo.currentTime = 0;
-    });
-
-    // Reproduzir os vídeos pequenos no hover
-    document.querySelectorAll('.item video').forEach(video => {
-      video.addEventListener('mouseenter', () => video.play());
-      video.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0;
-      });
-    });
-  });
-
-
-
-
-  function playVideo(item) {
-    const video = item.querySelector('video');
-    if (video) video.play();
-  }
-  
-  function pauseVideo(item) {
-    const video = item.querySelector('video');
-    if (video) video.pause();
-  }
-  
-  function openVideoModal(src) {
-    const modalVideo = document.getElementById('modalVideo');
-    modalVideo.src = src;
-    const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
-    videoModal.show();
-  
-    // Parar vídeo quando o modal for fechado
-    document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
-      modalVideo.pause();
-      modalVideo.currentTime = 0;
-    }, { once: true });
-  }

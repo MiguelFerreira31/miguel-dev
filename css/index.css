@@ -210,34 +210,13 @@ html body.dark-mode footer .inner-header {
   flex-direction: column;
 }
 html body.dark-mode main #cliente .titulo {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 0;
-  width: 100%;
-  height: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.404);
-  margin: 2%;
-  border-radius: 12px;
   background-color: #303030;
-  text-align: center;
 }
 html body.dark-mode main #service .inner-header {
-  height: 20%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
   background-color: #363636;
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 html body.dark-mode main #depoimento .depoimento-container .swiper-slide {
+  margin: 0;
   background: #222222;
 }
 html body.dark-mode main #projeto .inner-header {
@@ -1165,6 +1144,27 @@ html body main #home .home-container .home-link ul .li3 #btnHome:active:after {
     justify-content: center;
   }
 }
+@media screen and (max-width: 480px) {
+  html body main #home .home-container .home-link ul .titulo {
+    width: 90%;
+    flex-direction: column !important;
+    height: 30%;
+    margin-left: -5%;
+    justify-content: flex-start;
+    justify-content: flex-end;
+  }
+  html body main #home .home-container .home-link ul .titulo .nome {
+    width: 100%;
+    font-size: 2.5em;
+  }
+  html body main #home .home-container .home-link ul .titulo .titulo-principal {
+    width: 100%;
+    font-size: 2.2em;
+  }
+  html body main #home .home-container .home-link ul .li2 h3 {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 1025px) {
   html body main #home .home-container .home-link ul {
     justify-content: space-evenly;
@@ -1194,12 +1194,12 @@ html body main #cliente .titulo {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem 0;
-  width: 100%;
+  width: 80%;
   height: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-evenly;
+  justify-content: center;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.404);
   border-radius: 12px;
   background-color: rgb(255, 255, 255);
@@ -1213,6 +1213,7 @@ html body main #cliente .titulo .foguete-gif {
 }
 html body main #cliente .titulo h2 {
   width: 40%;
+  font-size: 1.7em;
 }
 html body main #cliente .cliente-container {
   height: 15vh;
@@ -1223,6 +1224,8 @@ html body main #cliente .cliente-container .swiper {
   height: 100%;
 }
 html body main #cliente .cliente-container .swiper-slide {
+  width: 30%;
+  height: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1231,10 +1234,11 @@ html body main #cliente .cliente-container .swiper-slide {
 html body main #cliente .cliente-container .swiper-slide img {
   display: block;
   width: 20%;
+  height: 60%;
 }
 @media screen and (max-width: 769px) {
   html body main #cliente .titulo {
-    width: 90%;
+    width: 80% !important;
     margin: 0 !important;
   }
   html body main #cliente .titulo .foguete-gif {
@@ -1242,16 +1246,26 @@ html body main #cliente .cliente-container .swiper-slide img {
   }
   html body main #cliente .titulo h2 {
     width: 70%;
-    font-size: 2em;
+    font-size: 1.6em;
   }
   html body main #cliente .cliente-container {
     width: 80%;
   }
 }
 @media screen and (max-width: 480px) {
+  html body main #cliente .titulo {
+    width: 90% !important;
+  }
+  html body main #cliente .titulo .foguete-gif {
+    width: 20%;
+  }
   html body main #cliente .titulo h2 {
-    width: 80%;
-    font-size: 1.5em;
+    width: 70%;
+    font-size: 1.3em;
+  }
+  html body main #cliente .swiper-slide img {
+    width: 40% !important;
+    height: 80% !important;
   }
 }
 html body main #sobre {
@@ -1356,7 +1370,7 @@ html body main #sobre .sobre-container ul li p {
 }
 @media screen and (max-width: 769px) {
   html body main #sobre {
-    height: 145dvh;
+    height: 155dvh !important;
   }
   html body main #sobre .sobre-container {
     flex-direction: column;
@@ -1365,8 +1379,8 @@ html body main #sobre .sobre-container ul li p {
     height: 30%;
   }
   html body main #sobre .sobre-container .sobreImg img {
-    width: 300px;
-    height: 300px;
+    width: 270px !important;
+    height: 270px !important;
     animation: none;
   }
   html body main #sobre .sobre-container ul {
@@ -1376,15 +1390,15 @@ html body main #sobre .sobre-container ul li p {
     width: 80%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 491px) {
   html body main #sobre {
-    height: 155dvh;
+    height: 166dvh !important;
   }
   html body main #sobre .sobre-container {
     flex-direction: column;
   }
   html body main #sobre .sobre-container .sobreImg {
-    height: 20%;
+    height: 10%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1392,12 +1406,13 @@ html body main #sobre .sobre-container ul li p {
     justify-content: flex-start;
   }
   html body main #sobre .sobre-container .sobreImg img {
-    width: 200px;
-    height: 200px;
+    margin-bottom: -5% !important;
+    width: 170px !important;
+    height: 170px !important;
     animation: none;
   }
   html body main #sobre .sobre-container ul {
-    height: 80%;
+    height: 100% !important;
     width: 100%;
     margin-top: -20%;
   }
@@ -1474,11 +1489,11 @@ html body main #service .parallax > use:nth-child(4) {
 }
 @media screen and (max-width: 769px) {
   html body main #service .inner-header {
-    height: 12%;
+    height: 5%;
   }
   html body main #service .waves-container {
-    height: 40px;
-    min-height: 40px;
+    height: 20px;
+    min-height: 20px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1782,13 +1797,28 @@ html body main #service .service-container .service-inner img {
   html body main #service .service-container .service-inner .service-cards {
     width: 100%;
   }
+  html body main #service .service-container .service-inner .service-cards ul li h3 {
+    font-size: 1.3em;
+  }
+  html body main #service .service-container .service-inner .service-cards ul li p {
+    font-size: 0.8em;
+  }
+  html body main #service .service-container .service-inner .service-cards ul li img {
+    width: 40px;
+  }
 }
 @media screen and (max-width: 480px) {
   html body main #service {
-    height: 160dvh;
+    height: 180dvh;
   }
   html body main #service .service-container .service-inner .service-cards ul {
     flex-direction: column;
+  }
+  html body main #service .service-container .service-inner .service-cards ul li h3 {
+    font-size: 1.3em;
+  }
+  html body main #service .service-container .service-inner .service-cards ul li p {
+    font-size: 0.8em;
   }
   html body main #service .service-container .service-inner .service-cards ul li img {
     width: 40px;
@@ -1805,12 +1835,12 @@ html body main #depoimento .depoimento-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 html body main #depoimento .depoimento-container .titulo {
   width: 100%;
-  height: 25%;
-  margin-top: 5%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1827,9 +1857,11 @@ html body main #depoimento .depoimento-container .titulo h2 {
   margin-block: 6px;
   font-size: 3.2rem;
   margin-top: 2%;
+  color: white;
 }
 html body main #depoimento .depoimento-container .titulo hr {
-  width: 100px;
+  height: 12px;
+  width: 150px;
 }
 html body main #depoimento .depoimento-container .titulo ul {
   width: 40%;
@@ -1855,7 +1887,7 @@ html body main #depoimento .depoimento-container .swiper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem 0;
-  height: 65%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1977,9 +2009,12 @@ html body main #depoimento .depoimento-container .swiper-pagination-bullet-activ
   html body main #depoimento {
     height: 170dvh;
   }
+  html body main #depoimento .titulo {
+    margin-top: -3%;
+  }
   html body main #depoimento .titulo h2 {
     font-size: 2.5em !important;
-    margin-top: 5% !important;
+    margin-top: 6% !important;
   }
   html body main #depoimento .swiper {
     width: 90% !important;
@@ -1988,20 +2023,52 @@ html body main #depoimento .depoimento-container .swiper-pagination-bullet-activ
     width: 90%;
   }
 }
+@media screen and (max-width: 769px) {
+  html body main #depoimento {
+    height: 120dvh;
+  }
+  html body main #depoimento .depoimento-container .titulo {
+    height: 20% !important;
+    margin-top: -12%;
+  }
+  html body main #depoimento .depoimento-container .titulo ul {
+    width: 90% !important;
+  }
+  html body main #depoimento .depoimento-container .titulo ul li {
+    text-align: center !important;
+  }
+  html body main #depoimento .depoimento-container .swiper {
+    height: 60%;
+  }
+  html body main #depoimento .depoimento-container .swiper .swiper-slide {
+    width: 100%;
+    height: 80%;
+  }
+  html body main #depoimento .depoimento-container .swiper .swiper-slide .cabecalho-card img {
+    width: 22% !important;
+    height: auto;
+    padding: 0;
+  }
+}
 @media screen and (max-width: 480px) {
   html body main #depoimento {
-    height: 150dvh;
+    height: 140dvh;
   }
-  html body main #depoimento .titulo {
-    height: 10% !important;
-    margin-bottom: -13% !important;
+  html body main #depoimento .depoimento-container .titulo {
+    height: 20% !important;
   }
-  html body main #depoimento .titulo h2 {
-    margin-top: 10% !important;
+  html body main #depoimento .depoimento-container .titulo ul {
+    width: 90% !important;
   }
-  html body main #depoimento .swiper {
+  html body main #depoimento .depoimento-container .titulo ul li {
+    text-align: center !important;
+  }
+  html body main #depoimento .depoimento-container .titulo ul li h3 {
+    margin-top: 3%;
+  }
+  html body main #depoimento .depoimento-container .swiper {
     margin-top: 15% !important;
-    height: 60%;
+    height: 70%;
   }
 }
 html body main #habilidades {
@@ -2112,6 +2179,9 @@ html body main #contact {
   height: 100vh;
   width: 100%;
   color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 html body main #contact .bgImage {
   margin: 0;
@@ -2162,6 +2232,7 @@ html body main #contact .contact-container .contact-inner {
   box-shadow: 0 8px 10px 0 #074c61;
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
+  margin-bottom: -2%;
 }
 html body main #contact .contact-container .contact-inner form {
   width: 100%;
@@ -2192,6 +2263,19 @@ html body main #contact .contact-container .contact-inner form input:focus {
   transform: scale(1.05);
   outline: none;
   background-color: #494949;
+}
+html body main #contact .contact-container .contact-inner form input::-moz-placeholder, html body main #contact .contact-container .contact-inner form textarea::-moz-placeholder {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 1%;
+}
+html body main #contact .contact-container .contact-inner form input::placeholder,
+html body main #contact .contact-container .contact-inner form textarea::placeholder {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 1%;
 }
 html body main #contact .contact-container .contact-inner form textarea {
   background-color: rgba(55, 55, 55, 0.5529411765);
@@ -2224,6 +2308,42 @@ html body main #contact .contact-container .contact-inner form .btnEnviar {
 }
 html body main #contact .contact-container .contact-inner form .btnEnviar:hover {
   opacity: 1;
+}
+@media screen and (max-width: 769px) {
+  html body main #contact .contact-container .contact-inner {
+    width: 90%;
+  }
+  html body main #contact .contact-container .contact-inner form input {
+    height: 12%;
+    margin: 0;
+  }
+  html body main #contact .contact-container .contact-inner form textarea {
+    margin-block: 1%;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body main #contact .contact-container {
+    align-items: flex-end;
+  }
+  html body main #contact .contact-container .contact-inner {
+    width: 90%;
+    height: 80%;
+  }
+  html body main #contact .contact-container .contact-inner form {
+    height: 100%;
+  }
+  html body main #contact .contact-container .contact-inner form input {
+    height: 8%;
+    margin: 0;
+  }
+  html body main #contact .contact-container .contact-inner form textarea {
+    margin-block: 1%;
+  }
+  html body main #contact .contact-container .contact-inner form .btnEnviar {
+    width: 200px;
+    height: 40px;
+    margin-top: 5%;
+  }
 }
 html body main #thanks {
   height: 100vh;
@@ -2350,30 +2470,51 @@ html body main #especialidade-projeto .especialidade-container .especialidade-tx
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card {
-  height: 19%;
+  height: 20%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-evenly;
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card img {
-  width: 100px;
+  width: 80px;
   height: auto;
-  background-color: #0ea9c4;
   border-radius: 50%;
+  background: linear-gradient(45deg, #005260, #00bcd4, #005260);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  transition: box-shadow 0.4s ease;
+}
+html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card img:hover {
+  box-shadow: 0 10px 25px rgba(0, 82, 96, 0.6);
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 18px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card .especialidade-card-txt {
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
+  width: 100%;
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card .especialidade-card-txt h3 {
-  padding: 1%;
+  font-size: 1em;
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card .especialidade-card-txt hr {
   width: 110px;
@@ -2384,17 +2525,34 @@ html body main #especialidade-projeto .especialidade-container .especialidade-im
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-img .especialidade-img-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0095b7;
   border-radius: 50%;
   width: 70%;
   height: 70%;
+  background: linear-gradient(45deg, #005260, #00bcd4, #005260);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  transition: box-shadow 0.4s ease;
+}
+html body main #especialidade-projeto .especialidade-container .especialidade-img .especialidade-img-inner:hover {
+  box-shadow: 0 10px 25px rgba(0, 82, 96, 0.6);
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 18px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
 }
 html body main #especialidade-projeto .especialidade-container .especialidade-img .especialidade-img-inner img {
   width: 75%;
@@ -2494,17 +2652,75 @@ html body main #especialidade-projeto .especialidade-container .especialidade-im
   top: 0;
   border-radius: 10px;
 }
+@media screen and (max-width: 1025px) {
+  html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card img {
+    width: 70px;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img {
+    width: 40%;
+    height: 60%;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img #btnEspecialista {
+    width: 300px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 769px) {
+  html body main #especialidade-projeto {
+    height: 150dvh;
+  }
+  html body main #especialidade-projeto .especialidade-container {
+    flex-direction: column;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-txt {
+    height: 40%;
+    width: 90%;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-txt h2 {
+    font-size: 1.5em;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img {
+    height: 40%;
+    width: 40%;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img .especialidade-img-inner {
+    height: 50%;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img .especialidade-img-inner img {
+    animation: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body main #especialidade-projeto .especialidade-container .especialidade-txt {
+    height: 40%;
+    width: 90%;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-txt h2 {
+    font-size: 1.4em;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-txt .especialidade-card-txt h3 {
+    font-size: 0.8em !important;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img {
+    height: 30%;
+    width: 60%;
+  }
+  html body main #especialidade-projeto .especialidade-container .especialidade-img #btnEspecialista {
+    width: 300px;
+    height: 60px;
+  }
+}
 html body main #projeto {
   height: 100vh;
   width: 100%;
-  height: 110vh;
+  height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 html body main #projeto .inner-header {
-  height: 20%;
+  height: 8%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -2579,10 +2795,10 @@ html body main #projeto .parallax > use:nth-child(4) {
 }
 @media (max-width: 480px) {
   html body main #projeto .inner-header {
-    height: 7%;
+    height: 4%;
   }
   html body main #projeto .waves-container {
-    height: 40px;
+    height: 30px;
   }
   html body main #projeto .header-content {
     height: 25vh;
@@ -2600,7 +2816,7 @@ html body main #projeto .titulo-projeto {
   color: white;
 }
 html body main #projeto .projeto-container {
-  height: 85%;
+  height: 92%;
   width: 100%;
   flex-direction: column;
   background-color: #222222;
@@ -2611,47 +2827,154 @@ html body main #projeto .projeto-container .projeto-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 0;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
-html body main #projeto .projeto-container .projeto-inner .img-site {
-  text-align: center;
-  width: 270px;
-  height: 440px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px;
-  transition: 0.5s;
-}
-html body main #projeto .projeto-container .projeto-inner .img-site:hover {
-  transition: 0.5s;
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(78, 78, 78, 0.4862745098), 0 12px 40px rgba(78, 78, 78, 0.5843137255);
-}
-html body main #projeto .projeto-container .projeto-inner .image {
+html body main #projeto .projeto-container .projeto-inner .item {
   width: 100%;
-  height: auto;
-  transition: transform 0.7s ease-in-out;
-  border-radius: 8px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  color: white;
 }
-html body main #projeto .projeto-container .projeto-inner .image:hover {
-  transform: translateY(-15%);
-  transition: 3s;
+html body main #projeto .projeto-container .projeto-inner .item video {
+  width: 35%;
+  border-radius: 12px;
+  transition: 0.5s;
 }
-html body main #projeto .projeto-container .projeto-inner .image1:hover {
-  transform: translateY(-39%);
-  transition: 3s;
+html body main #projeto .projeto-container .projeto-inner .item video:hover {
+  box-shadow: 0 10px 25px rgba(0, 82, 96, 0.6);
+  transform: scale(1.02);
 }
-html body main #projeto .projeto-container .projeto-inner .image3:hover {
-  transform: translateY(-48%);
-  transition: 3s;
+html body main #projeto .projeto-container .projeto-inner .item article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 40%;
+  height: 50%;
+}
+html body main #projeto .projeto-container .projeto-inner .item article h3 span {
+  color: #00879f;
+  font-size: 0.7em;
+}
+html body main #projeto .projeto-container .projeto-inner .item article ul {
+  width: 80%;
+  padding: 0;
+}
+html body main #projeto .projeto-container .projeto-inner .item article ul li {
+  width: 100%;
+}
+html body main #projeto .projeto-container .projeto-inner .item article ul li strong {
+  color: #00879f;
+}
+html body main #projeto .projeto-container .projeto-inner .item article ul li:nth-child(2) {
+  list-style: circle;
+}
+html body main #projeto .projeto-container .projeto-inner .item article .btn-itens {
+  width: 30%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+html body main #projeto .projeto-container .projeto-inner .item article .btn-itens a {
+  width: 40%;
+  text-decoration: none;
+}
+html body main #projeto .projeto-container .projeto-inner .item article .btn-itens a i {
+  width: 100%;
+  height: 100%;
+  background: #0393ac;
+  opacity: 0.7;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  color: white;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("../img/pointer.png"), pointer;
+  transition: 0.5s;
+  animation: blobNew 12s infinite ease-in-out;
+  font-size: 1.5em;
+}
+html body main #projeto .projeto-container .projeto-inner .item article .btn-itens a i:hover {
+  opacity: 1.7;
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 #0393ac;
+}
+html body main #projeto .projeto-container .projeto-inner .item article .btn-itens a i:nth-child(2) {
+  animation: blobBack 10s infinite ease-in-out;
+}
+@media screen and (max-width: 1025px) {
+  html body main #projeto .projeto-container .projeto-inner .item video {
+    width: 40%;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item article {
+    width: 50%;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item article ul {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 769px) {
+  html body main #projeto {
+    height: 220dvh;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item {
+    flex-direction: column;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item video {
+    width: 70%;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item article {
+    width: 90%;
+    height: 50%;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item article ul {
+    width: 100%;
+  }
+  html body main #projeto .projeto-container .projeto-inner div:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body main #projeto {
+    height: 270dvh;
+  }
+  html body main #projeto .titulo-projeto h2 {
+    font-size: 1.5em;
+  }
+  html body main #projeto .projeto-container {
+    height: 95%;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item {
+    flex-direction: column;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item video {
+    width: 90%;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item article .btn-itens {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html body main #projeto .projeto-container .projeto-inner .item article .btn-itens a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
 }
 html body main #privacy {
   height: 190vh;
@@ -2728,84 +3051,9 @@ html body main #privacy .privacy-container .privacy-inner p {
   padding-inline: 20%;
   text-align: center;
 }
-html body main #portifolio {
-  height: 100vh;
-  width: 100%;
-  height: 150dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-html body main #portifolio .portifolio-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-html body main #portifolio .portifolio-container .item {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-evenly;
-}
-html body main #portifolio .portifolio-container .item video {
-  width: 35%;
-  border-radius: 12px;
-}
-html body main #portifolio .portifolio-container .item article {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-direction: column;
-  width: 40%;
-  height: 50%;
-}
-html body main #portifolio .portifolio-container .item article .btn-itens {
-  width: 30%;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-evenly;
-}
-html body main #portifolio .portifolio-container .item article .btn-itens a {
-  width: 40%;
-  text-decoration: none;
-}
-html body main #portifolio .portifolio-container .item article .btn-itens a i {
-  background: #0393ac;
-  opacity: 0.7;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-  color: white;
-  width: 60px;
-  height: 60px;
-  text-decoration: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: url("../img/pointer.png"), pointer;
-  transition: 0.5s;
-  animation: blobNew 12s infinite ease-in-out;
-  font-size: 1.5em;
-}
-html body main #portifolio .portifolio-container .item article .btn-itens a i:hover {
-  opacity: 1.7;
-  filter: brightness(1.2);
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px 0 #0393ac;
-}
-html body main #portifolio .portifolio-container .item article .btn-itens a i:nth-child(2) {
-  animation: blobBack 10s infinite ease-in-out;
-}
 html body footer {
   width: 100%;
-  height: 50vh;
+  height: 52vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2999,16 +3247,13 @@ html body footer .copy {
   height: 100px;
   text-align: center;
   color: white;
-  margin-block-end: 2%;
 }
 html body footer .copy h4 {
   font-size: 1.3em;
-  padding-block: 4%;
   background-color: #222222;
 }
 html body footer .copy a {
   font-size: 0.9em;
-  margin-block: 5%;
   color: #0393ac;
   text-decoration: underline;
   transition: 0.5s;
